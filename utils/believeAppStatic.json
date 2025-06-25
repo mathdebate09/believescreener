@@ -1,0 +1,1762 @@
+[
+  {
+    "ticker": "LAUNCHCOIN",
+    "name": "Launch Coin",
+    "description": "Launch Coin enables you to turn any tweet into a coin. Reply with @launchcoin to activate.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/6484b5f1-05ed-4f04-bc2d-7699ae89e4a2-avatar_307FA8A3-67DB-4EB8-B87F-11B46A9ED809.jpg",
+    "price": 0.12122633977768,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 120062785.832685,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 33438,
+      "liquidity": 2380515.76827431,
+      "price": 0.120078040085276
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://i.ibb.co/KjJpyPMg/IMG-2107.png",
+      "position": 0
+    },
+    "mintadd": "Ey59PH7Z4BFU4HjyKnyMdWt5GGN76KazTAwQihoUXRnk"
+  },
+  {
+    "ticker": "DUPE",
+    "name": "Dupe",
+    "description": "Deal Unlocking Price Engine saves millions of users up to 90% off furniture, fashion, and accessories. We’re viral everywhere on socials!",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/1730773d-23ae-4403-9ab4-7ff77772c510-avatar_06D18F35-1EDE-414D-98FA-04AFED0570D0.jpg",
+    "price": 0.0266244459750434,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 26708518.1140584,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 7042,
+      "liquidity": 1115671.22669974,
+      "price": 0.0267098846787134
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "fRfKGCriduzDwSudCwpL7ySCEiboNuryhZDVJtr1a1C"
+  },
+  {
+    "ticker": "KNET",
+    "name": "Kingnet AI",
+    "description": "Reconstructing Game development paradigms with natural language.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/43127e2e-19fc-435f-b105-730276161d4e-avatar_5E679167-1EF3-40FF-8487-143653486BCF.jpg",
+    "price": 0.00966169018855176,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 9661449.98565076,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 5574,
+      "liquidity": 439705.218919638,
+      "price": 0.00966169018855176
+    },
+    "media": {
+      "type": "VIDEO",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/92abe02a-5abd-4654-8218-bba91ad9fe4c-D1230C2E-D1BC-4E06-B79E-6FB836001362.mp4",
+      "position": 0
+    },
+    "mintadd": "CfVs3waH2Z9TM397qSkaipTDhA9wWgtt8UchZKfwkYiu"
+  },
+  {
+    "ticker": "PCULE",
+    "name": "Polycule",
+    "description": "Polycule v1 is finally live.\n\nPolycule is the ultimate Telegram trading bot for Polymarket. Search for markets, place orders, &amp; manage positions all in telegram.\n\nWe built Polycule because trading prediction markets was impossible &amp; we wanted a way to trade with our fnf.\n\nWe’ve https://t.co/xVBh10C82t",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/2e63f23d-a65f-44cf-b9b6-c62660dfbe77-avatar_0C08DA06-9AA7-48FE-A7A2-8EDD9B169948.jpg",
+    "price": 0.00817939259703886,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 8159571.51806144,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 4039,
+      "liquidity": 672632.077169976,
+      "price": 0.00815966499360196
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "J27UYHX5oeaG1YbUGQc8BmJySXDjNWChdGB2Pi2TMDAq"
+  },
+  {
+    "ticker": "FITCOIN",
+    "name": "FITCOIN",
+    "description": "This is Fitted, your AI-powered virtual closet.\n\nUpload your clothes, style yourself, resell your clothes, and share with friends.\n\nWe have over 300k downloads, 300M+ views on socials, and over 1 million pieces uploaded to our app by our users.\n",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media//fitted3%202.png",
+    "price": 0.00422427779058993,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 3900604.61318405,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 4206,
+      "liquidity": 240253.086554966,
+      "price": 0.00422427779058993
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/Frame%202147227120.png",
+      "position": 0
+    },
+    "mintadd": "Cr2mM4szbt8286XMn7iTpY5A8S17LbGAu1UyodkyEwn4"
+  },
+  {
+    "ticker": "YAPPER",
+    "name": "Yapper",
+    "description": "Yapper is a deepfake AI app for creating hilarious high quality videos.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/e4d8203d-82b3-46b7-bccb-40d156795fe8-profile-images/1747261090193-nsfgwuzw-yapperBelieveLogo.png",
+    "price": 0.00309603225933667,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 3088255.13183859,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 5298,
+      "liquidity": 215547.977406979,
+      "price": 0.00309603225933667
+    },
+    "media": {
+      "type": "VIDEO",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/f0b868f3-2ff4-4053-95c1-8707bcdb284c-token-media/1747261085305-59wtoi4l-yapperBelieveDemoCut.mp4",
+      "position": 0
+    },
+    "mintadd": "H1aoUqmp2vJu5o8w3o8LjrN6jKyWErS69PtYxGhfoXxf"
+  },
+  {
+    "ticker": "BUDDY",
+    "name": "CreatorBuddy",
+    "description": "I HATE that Grok doesn't have access to my X posts\n\nSo I built a custom AI that does\n\nAsk the AI any question you want about your ENTIRE content history. Get insight on how to improve your content instantly: https://t.co/QzEZp0mNBK",
+    "img": "https://benpasternak.me/hosting/cb.jpg",
+    "price": 0.00240667556440864,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 2406394.62683599,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 3606,
+      "liquidity": 147049.351863655,
+      "price": 0.00240667556440864
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "65svCEvM4HdBHXKDxfhjm3yw1A6mKXkdS6HXWXDQTSNA"
+  },
+  {
+    "ticker": "SUBY",
+    "name": "Suby",
+    "description": "Accept crypto payments where your users already are. \n\nPaylinks, subscriptions, and payments all automated on Telegram & Discord. \n\nCrypto payments in seconds, without custody, plugins or code.\n\nWebsite: https://suby.fi",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/e04b4288-1954-4601-8578-5a6de08908ba-avatar_9260E313-3B19-43D6-BFD3-7824813FDB9C.jpg",
+    "price": 0.00227695470924572,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 2276930.35954719,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 1525,
+      "liquidity": 135289.172756449,
+      "price": 0.00227695470924572
+    },
+    "media": {
+      "type": "VIDEO",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/a039c93d-14f6-4e02-b3b6-da593025dd57-E193E333-7BE7-4AA4-B574-70C0F5AD24A2.mp4",
+      "position": 0
+    },
+    "mintadd": "G2pMCBjRQHHCkE79r9KAESvdhUCieWPZvX5GRFa3jCLg"
+  },
+  {
+    "ticker": "GIGGLES",
+    "name": "Giggles",
+    "description": "This is Giggles. We have 110K signups, 150M views on social media. Nothing spent on marketing. \n\nMillennials have Facebook, Gen Z have TikTok, Gen Alpha will have Giggles. Tag a friend for a free invite.\n\n@launchcoin $GIGGLES + Giggles https://t.co/1Sse2OJkUG",
+    "img": "https://benpasternak.me/hosting/giggles.jpg",
+    "price": 0.00223047608324719,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 2229308.5160014,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 1876,
+      "liquidity": 155170.245363996,
+      "price": 0.00223047608324719
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "Bsow2wFkVzy1itJnhLke6VRTqoEkYQZp7kbwPtS87FyN"
+  },
+  {
+    "ticker": "RUNNIT",
+    "name": "Runnit",
+    "description": "Gamble On-Chain | Provably Fair, Non-Custodial, No KYC. Built on Solana.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/719069f9-1fe0-42ab-a584-6e2a31f7217b-favicon.png",
+    "price": 0.00128316863033949,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 1266886.69760216,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 1643,
+      "liquidity": 210508.283561852,
+      "price": 0.0012712549832584
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/ec13b99a-c6ca-4cd2-88aa-0dbd9ccbb727-header.jpg",
+      "position": 0
+    },
+    "mintadd": "5mjbjHRb327yvcWUc5WPywhCbYi32pqUqxPUCtpipBLV"
+  },
+  {
+    "ticker": "POGGERS",
+    "name": "Poggers",
+    "description": "Energy ⚡️ Hydration 💦 Sleep vibes 😴 now on-chain ",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/3d35e128-51da-4cc5-bda9-12203aa41934-POG25_PFP_LEMONADE.png",
+    "price": 0.00123759750090076,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 1237594.24056426,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 820,
+      "liquidity": 177791.300069521,
+      "price": 0.00123759750090076
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/09914f58-f1ac-400e-9caa-7e94535f4c84-POG25_PFP_LEMONADE.png",
+      "position": 0
+    },
+    "mintadd": "3ywqi49rbrsgyNoyBDngQKKjqFTMxCrZXF2NgnYDqGo4"
+  },
+  {
+    "ticker": "PROMPT",
+    "name": "promptbidder",
+    "description": "Introducing https://t.co/hikaFYGxLK - a new prompt-based ad network. https://t.co/Gl7tTPmELc",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/bf3a4062-2d45-416a-a85e-457f375abbc7-avatar_1B24A98A-3258-4E9A-913B-FB7FE8E78FEA.jpg",
+    "price": 0.00120638324969829,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 1211411.82417249,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 2786,
+      "liquidity": 108568.208422307,
+      "price": 0.00121143739370446
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "9NW7fiBu4uHpLx3rxiMccucyKwADwuptTpb8z2YYj9SH"
+  },
+  {
+    "ticker": "GLMPS",
+    "name": "glympse",
+    "description": "Glympse.fun is fantasy sports for Web2 attention, where creators earn as others bet on their performance.\n\nBuy tokens of your favorite X accounts and draft teams you think will have the best engagement to win prizes.\nToday it's X. Soon: Twitch, Spotify, TikTok, YouTube and more.\n\nCreators trade like memecoins, but now, they’re backed by real engagement.\nNow, anyone create a market for their social presence.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/b0b274d4-1a83-441b-bd79-a02637c0a1e1-avatar_C143A2B1-99AF-4CC8-9081-1D349C7D627F.jpg",
+    "price": 0.00104808192889551,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 1047528.17153904,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 3006,
+      "liquidity": 105932.971842832,
+      "price": 0.00104753423977465
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "445ksMigJLms4mw29DQkXs8aWBG4S8Z2kTBCtGhd5nGd"
+  },
+  {
+    "ticker": "AIXBC",
+    "name": "Believe Capital",
+    "description": "Lead ecosystem fund for Believe. Strategic capital, playbooks, signals, and vetting within the largest community of founders and investors on the Believe ecosystem. Led by a team of seasoned builders and investors, our approach has helped support multiple breakthrough projects.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/7320c5d4-ee5c-49ac-a941-ee5952078546-avatar_70F35ED3-AC0E-4BCB-B7EA-E9F1B3A8739F.jpg",
+    "price": 0.0010132636790955,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 1007526.90227107,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 1736,
+      "liquidity": 122309.317198601,
+      "price": 0.00100753362882249
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/cfaa3fde-990f-4f01-86e7-51ac335083d7-media_0_C7B7FE79-DB8B-4121-8F93-B1964E018453.jpg",
+      "position": 0
+    },
+    "mintadd": "Hefh4Yv3cUGstf7wvEFPuKY7zAEhPxAvgZaoQnytW8md"
+  },
+  {
+    "ticker": "AVO",
+    "name": "avo",
+    "description": "Avo launched! Let's celebrate! Its a Marketplace For Crypto Trading Agents!! Find agents to trade for you in the trenches so you can sit back and enjoy some avo toast",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/eb7e1b37-334c-40f2-a0cb-3177faeb5540-token-media/1748477793330-tfdfux3w-1.png",
+    "price": 0.000750523271678487,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 750509.227968811,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 2699,
+      "liquidity": 204276.062168196,
+      "price": 0.000750523271678487
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "GdZ9rwHyKcriLdbSzhtEFLe5MLs7Vk6AY1aE5ei7nsmP"
+  },
+  {
+    "ticker": "NOODLE",
+    "name": "Noodle",
+    "description": "",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/photo_2025-05-12%2018.49.52.jpeg",
+    "price": 0.000650733754123094,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 650708.61364854,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 5180,
+      "liquidity": 88356.186949085,
+      "price": 0.000650733754123094
+    },
+    "media": {
+      "type": "VIDEO",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media//noodlelaunch.mov",
+      "position": 0
+    },
+    "mintadd": "7cEgQdp8JTXvBrpjSzji7bLEeCHWENRwX62B2Ep97k5H"
+  },
+  {
+    "ticker": "INBOX",
+    "name": "INBOX",
+    "description": "@Inboxapp_ is live on @believeapp\n\nInboxapp is the Inbox & CRM for 𝕏\n\n- Manage, delegate share your 𝕏 inbox\n- Find prospects on 𝕏 our database &amp; scrapers\n- Automate outreach with our sales tools\n\n→ https://inboxapp.com",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/766abbcf-8c92-49f5-8750-a8f0cc78c9c2-avatar_256F8F6F-021A-47A7-B84D-A5EACE94D0F6.jpg",
+    "price": 0.000610038366236486,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 608833.880967427,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 1246,
+      "liquidity": 116241.418277255,
+      "price": 0.000608894249760319
+    },
+    "media": {
+      "type": "VIDEO",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/e8dc5640-3ee4-45df-90c7-42945306a9b6-BC17B757-A0E1-447C-8059-60EDB4D70C85.mov",
+      "position": 0
+    },
+    "mintadd": "8r5ZuzAt5c8VAHVSMpgUJNzpp88wHLnJCsLTLMdsf27Z"
+  },
+  {
+    "ticker": "CREATOR",
+    "name": "creatorgen",
+    "description": "Introducing: @Creatorgenapp, the most realistic AI influencers ever (yes this video is AI).\n\nBrands get scalable ads. Influencers earn passive income when an ad is generated with their face.\n\nNo lawsuits. No fake-looking avatars. Just AI-powered marketing at scale.",
+    "img": "https://benpasternak.me/hosting/creatorgen.jpg",
+    "price": 0.000403162106399959,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 403120.374278473,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 866,
+      "liquidity": 52788.1114888246,
+      "price": 0.000403162106399959
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "VTaqS4G29U5UUfYbXwzPjK4sDPcswuKZfMY34DbsGqb"
+  },
+  {
+    "ticker": "BUMP",
+    "name": "Bump Apps",
+    "description": "I’m all-in on peer pressure.\nYou’ll hit the gym if your friends are watching.\nYou’ll go for that run if the group chat is roasting you.\nYou’ll actually stick with it - if you’re not doing it alone.\n\nI teamed up with @businessbarista to build FistBump - the app that uses friendly peer pressure to keep you going.\n\nThis is the first drop from Bump Apps - a studio building apps that help people level up.\nWe’re building in public, launching fast, and learning faster.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/259e040d-bec2-407f-ac66-a7afe0884c89-avatar_F0E590B2-6063-42EC-BC88-0065E5506C25.jpg",
+    "price": 0.000356282991923225,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 356272.316485161,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 2578,
+      "liquidity": 57938.9620717282,
+      "price": 0.000356282991923225
+    },
+    "media": {
+      "type": "VIDEO",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/b8554973-76bc-404d-ad9e-e66996871c39-048D7517-A57D-4E98-B271-8831DFCC6A6B.mov",
+      "position": 0
+    },
+    "mintadd": "5fG1KadrP3yD66gx4GgkFpvLE2UvzxwGKJLWsd1cyoNv"
+  },
+  {
+    "ticker": "SUPFRIEND",
+    "name": "SuperFriend",
+    "description": "SuperFriend helps you visualize, comprehend, and chat with your codebase.",
+    "img": "https://benpasternak.me/hosting/helena_icon.png",
+    "price": 0.000323709625222316,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 323701.351203752,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 1786,
+      "liquidity": 48267.6248400554,
+      "price": 0.000323709625222316
+    },
+    "media": {
+      "type": "VIDEO",
+      "mediaUrl": "https://benpasternak.me/hosting/helena_video.mov",
+      "position": 0
+    },
+    "mintadd": "GcmsHHG41giJYACYKrdxZp3kdKMZfg1UB7LaYzCzPxLJ"
+  },
+  {
+    "ticker": "BRIX",
+    "name": "BRIX",
+    "description": "We’re building Brix: the world’s first AI-native recruiting agency. From job description to global payroll, we automate the entire hiring lifecycle. $0 → $20M ARR in 12 months, $8mil+ raised, 100+ companies onboarded and 100's of engineering, sales and more roles hired\n\nNow launching with the Believe App!",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/79f5b1b9-eae8-4ebd-9fda-691c64932338-avatar_753ABD4F-2583-4773-943A-0F5B0958D883.jpg",
+    "price": 0.000316032759777276,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 316029.452771589,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 1012,
+      "liquidity": 148621.106880874,
+      "price": 0.000316032759777276
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/788221d7-feac-4b94-a3c1-7fa6bc278d35-token-media/1748042940577-f70a1zvw-Screenshot_2025-05-23_at_4.26.06_PM.png",
+      "position": 0
+    },
+    "mintadd": "5XEStNFNenRkAB9BtfteEL7yeM5XDZb8TZaPMJvNaPwx"
+  },
+  {
+    "ticker": "BANNED",
+    "name": "BANNED",
+    "description": "BANNED is a social media movement and a short-form video content platform.\n\nOur vision is simple: goodcontent>algocontent\n\nIn $BANNED we trust.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/4b4e0ac7-723b-4fd4-965d-207adf2b16dc-avatar_DAE5879C-B436-40B7-9578-4600CA959E2D.jpg",
+    "price": 0.000289886626218761,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 288280.610314354,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 1087,
+      "liquidity": 45083.4012520893,
+      "price": 0.000288309442418296
+    },
+    "media": {
+      "type": "VIDEO",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/d40100d5-4f47-4eee-bc8d-b6bf7c0f2e31-8D39788A-4035-47D9-9736-525DA901F25E.mov",
+      "position": 0
+    },
+    "mintadd": "EecSMXvvhszENGs7SAWMejLgBHBAhCvkMDWY88JR7hog"
+  },
+  {
+    "ticker": "AURA",
+    "name": "Aurascope",
+    "description": "take photos of people and the world around you and find out the aura score. now available in the App Store",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/8ee7a4ff-b837-4c22-98eb-27223d727998-avatar_6A0074F9-5BD1-4424-A929-2310A2057DA5.jpg",
+    "price": 0.000243398610357244,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 243396.605849876,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 1049,
+      "liquidity": 41832.5449809184,
+      "price": 0.000243398610357244
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/8f21418f-6e38-4ae3-9821-90c84c1bee4a-media_0_D8F8B86C-3F07-4D3C-9DDF-C36DAC2EA308.jpg",
+      "position": 0
+    },
+    "mintadd": "CMkj12qHC9RjAUs1MED38Bt7gfyP3TbEpa1mcBno3RUY"
+  },
+  {
+    "ticker": "FDRY",
+    "name": "Foundry",
+    "description": "Foundry is a data-native command center that transforms fragmented workflows into intelligent, automated systems. \n\nIt addresses the core problem of context collapse in modern work environments, where teams constantly switch between multiple applications, manually transfer data, and lose contextual information with each transition.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/5d145384-7492-46f8-add4-ff2b2dda4b95-avatar_6CC578BF-A8D7-4F9F-B18B-3CFA2C51F5CB.jpg",
+    "price": 0.000214046131867678,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 214043.640891821,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 608,
+      "liquidity": 89366.5541986258,
+      "price": 0.000214046131867678
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/cb8ad312-aa38-4b4e-a36f-4b321fd8f8ca-88de963c-d845-4d67-9dd2-24ffc4376a8c.png",
+      "position": 0
+    },
+    "mintadd": "2ZiSPGncrkwWa6GBZB4EDtsfq7HEWwkwsPFzEXieXjNL"
+  },
+  {
+    "ticker": "CRACK",
+    "name": "CRACKFUN",
+    "description": "Get paid to gaslight AI in realtime AI jailbreaking competitions at crack.fun — may the best prompt win",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/2461ca58-9b03-40cc-b767-3d560477ae57-avatar_D129F74E-F9C0-44C7-AB7F-BF9305D96D31.jpg",
+    "price": 0.000190676344707202,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 190667.183666663,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 934,
+      "liquidity": 125147.866920564,
+      "price": 0.000190676344707202
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/c4b728df-3d94-4fd8-b6e1-ed70fc4b662d-token-media/1747967737668-fp8ghy72-crack.png",
+      "position": 0
+    },
+    "mintadd": "5Bvg53Pgat7n7YfHioaG1r8tjY7UvgnZzBq4tFx3yWxp"
+  },
+  {
+    "ticker": "APES",
+    "name": "PRIMEAPE",
+    "description": ".@launchcoin $APES  +PRIMAPE @PrimapeApp\n\n🚀 Welcome to PRIMAPE!\n Now live on @ApeChainHUB powered by @apecoin \n\nThrilled to share we’ve been accepted and completed @thirdweb Startup Program Cohort 5!\n\nDemo Week Feature Highlight: Thirdweb’s Universal Bridge 🌉\n\nNow anyone can dive into our prediction markets with zero crypto hassle:\n• Select your prediction\n• Enter your amount in @apecoin\n• Checkout seamlessly with a credit card or any crypto wallet\nFast, easy & secure-crypto simplified",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/cb67c688-2c43-4a5f-b250-77130db3f501-avatar_E0AAD38B-98A2-42F9-84CE-28A136030B8E.jpg",
+    "price": 0.000166773511129974,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 166769.990435661,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 447,
+      "liquidity": 37203.0677298827,
+      "price": 0.000166773511129974
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/3134e0fb-cff7-4ec3-96e2-1a5d210acf96-media_0_4C2E4382-D3CE-4072-B563-66FEF25F62C0.jpg",
+      "position": 0
+    },
+    "mintadd": "9BZJXtmfPpkHnM57gHEx5Pc9oQhLhJtr4mhCsNtttTts"
+  },
+  {
+    "ticker": "MEALY",
+    "name": "Mealy",
+    "description": "Mealy transforms your random ingredients into delicious possibilities with just a photo. Point your camera, get personalized recipes, and save up to $360 monthly by turning what you already have into tonight's meal.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/645f5e69-ef7d-4f54-93bf-9bcd1aba6db3-avatar_1131DB23-2DD3-4FAF-B69A-FECC03633A9D.jpg",
+    "price": 0.000160921995165973,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 154365.382198906,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 501,
+      "liquidity": 96615.9002880283,
+      "price": 0.000154367146725935
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/ca849e51-ab84-4a12-9d1b-314b51951088-media_0_10C30795-AA73-4A27-AD27-DC89AFB44A25.jpg",
+      "position": 0
+    },
+    "mintadd": "J1cGm3nJcfHjLEnTGwbTTqV3kKYmEuEUgyJ6K2fL3SRj"
+  },
+  {
+    "ticker": "RAI",
+    "name": "RAIMONITORS",
+    "description": "Twitter and Crypto monitoring service for your communities. Get real-time Twitter and crypto alerts directly in your community with RAI's powerful monitoring bot",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/98adf349-1035-4fca-b9fd-5bd59a78e62d-token-media/1748025831440-hmioqbwp-rai-logo.png",
+    "price": 0.000111540988224821,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 111530.896071133,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 621,
+      "liquidity": 113061.422535465,
+      "price": 0.000111540988224821
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/5570e48b-2100-4e2a-a64f-73c23d5e1af1-token-media/1748025829222-79cq1i0d-rai-logo.png",
+      "position": 0
+    },
+    "mintadd": "6QXgoNRr5J8nZsxzgCp4muGnM84vc3ZdCSPGFqUYkYHx"
+  },
+  {
+    "ticker": "MUZE",
+    "name": "MUZEFUND",
+    "description": "$MUZE is a mechanism to turn collective belief into real-world beauty. Every time $MUZE is bought or sold, 100% of the transaction fees are set aside in a pool to fund artists, art projects, and creative experiments – no strings attached.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/dc8ff91e-7d5b-47a8-8403-efebb3b306ea-token-media/1748014973551-r4g8ixxv-twitter-av.png",
+    "price": 0.000094582602544116,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 95200.5951091268,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 849,
+      "liquidity": 99931.9291925509,
+      "price": 0.000095213692839755
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/66b089ab-43ba-456e-a719-3d1ec5386bbc-token-media/1748014972720-vgaw8kte-twitter-av.png",
+      "position": 0
+    },
+    "mintadd": "Ahh7JmF9zfiGbc9dCGvmUuiYSoJUckVi1HoBHDJhijhL"
+  },
+  {
+    "ticker": "FRAME",
+    "name": "FIRSTFRAMEAI",
+    "description": "This is Firstframe. Your all-in-one AI movie generator. Generate the best AI movies with the best AI models.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/b14ac31c-f57e-4a42-8164-573fa4d04f33-avatar_E24F7207-98E1-4138-9AD9-75FF591854FA.jpg",
+    "price": 0.000060943212279367,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 60941.7864634014,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 752,
+      "liquidity": 52439.6387644874,
+      "price": 0.000060943212279367
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "FNms8UxFkiaGNBzNMJ4eonTNcpGGYWxH9bVk7Wc6NE8U"
+  },
+  {
+    "ticker": "DRAGON",
+    "name": "Recursive Dragon",
+    "description": "From its inception, the mission of Recursive Dragon has been to promote algorithmic thinking and instill a love for programming in young minds. Students are matched with a mentor from our small team of CS majors, potentially progressing from introductory programming in Scratch, Python, or Java, all the way up to the highest level of the USA Computing Olympiad.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/e0dd625c-7279-4bc2-96bf-46873b823fe6-token-media/1748485906870-f67l2fxc-LOGO.png",
+    "price": 0.000024871203531186,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 24928.3341216014,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 355,
+      "liquidity": 79598.5813954169,
+      "price": 0.000024930339622028
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/e82b26e6-d7ee-45da-b9ed-05010f4b5dc5-token-media/1748485906290-e9k01jjv-LOGO.png",
+      "position": 0
+    },
+    "mintadd": "AojAwbGdi4k8d4H6xY2ECfWEYkhFYEZcibXJmQde332N"
+  },
+  {
+    "ticker": "YAP",
+    "name": "yap - just keep yapping",
+    "description": "writing is cool, but yapping just hits different. meet yap, your ai bestie & video journal for real self-care. ever wish your journal could actually talk back and help you glow up for real? capture your realest moments on video, chat with a customizable ai bestie, therapist, friend, coach, etc. whatever you need the most and get deep insights using ai into your moods, habits, and daily vibes. ",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/cd14b52b-695c-4a04-bd1e-e51d5cb9afc8-bear-icon.png",
+    "price": 0.000138619326870335,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 138618.222727744,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 597,
+      "liquidity": 79745.117979219,
+      "price": 0.000138619326870335
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/a38417fb-ce34-4536-b2b4-48e0b97aabf4-confide_journal.png",
+      "position": 0
+    },
+    "mintadd": "HpjpqoF2hxGGhEJa2crrMgtwg247pVHZbTMkkawBkBLV"
+  },
+  {
+    "ticker": "BELLA",
+    "name": "Bella Believe",
+    "description": "Your key to the Believe ecosystem.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/0069512e-61f4-478c-9057-701b945354ad-Untitled_design_70.png",
+    "price": 0.000018977478640533,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 18975.9651388583,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 315,
+      "liquidity": 57967.67755475,
+      "price": 0.000018977478640533
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/48bd1eaa-9caf-40f6-bc86-17abea643b31-Untitled_design_70.png",
+      "position": 0
+    },
+    "mintadd": "D3feuDGFacZRLJeuXh3tDMgcSxMngQzpwF3QGWJcfBaS"
+  },
+  {
+    "ticker": "DEAL",
+    "name": "DEAL WITH IT",
+    "description": "$DEAL - The Internet's Sunglasses.\n\n50% of trading fees go to funding viral stunts and rewarding engagement. \n\nThe shades stay on, DEAL WITH IT.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/34acaf70-74c4-48d8-88e3-92fb2b12099e-avatar_DE5B64D6-4C93-4D43-A1DB-0E41B23A3B11.jpg",
+    "price": 0.000161292353864608,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 156820.46848039,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 1302,
+      "liquidity": 126114.691078671,
+      "price": 0.000161848605012523
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/07d80cf3-b931-434a-ac41-9a073313f03b-dealwithit-icon.png",
+      "position": 0
+    },
+    "mintadd": "EdhCrv9wh2dVy7LwA4kZ3pvBRhSXzhPrYeVqX7VcsmbS"
+  },
+  {
+    "ticker": "BEU",
+    "name": "Believe University",
+    "description": "A private lab for startup founders turning attention into capital.\n\n👀 Built for:\n\nStartup founders who want early users\n\nBuilders with ideas, but no roadmap for raising\n\nCreators ready to turn belief into funding\n\n🧪 Inside you’ll find:\n\nPlaybooks to raise without pitching to VCs\n\nA community of sharp founders\n\nGuidance from the team behind the scenes\n\nEarly access to ideas, drops, and tools",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/835839f9-58db-4d0d-a083-01478e4a00ac-avatar_9E7ACA3E-D78D-4204-A094-CF715EF5DADF.jpg",
+    "price": 0.000715530131842046,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 0,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 0,
+      "liquidity": 0,
+      "price": 0
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/fcb25854-922e-401f-be26-7b1c7dccfe97-token-media/1748488582824-m752c597-2240FB04-C0FC-4ED8-9C43-E0C7C9143C31.PNG",
+      "position": 0
+    },
+    "mintadd": "AtkJrro7n295559RaSz9TSDvLMp5w92dzThZiZqXWLhN"
+  },
+  {
+    "ticker": "SLSH",
+    "name": "SLESH",
+    "description": "Slesh is a web copilot that lets you interact with websites using natural language. Slesh navigates, answers questions and takes actions for you.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/15611ca1-04e1-41d5-bf8d-5e122e623c8e-avatar_66778925-DA63-4089-9BD1-0EC46757CA61.jpg",
+    "price": 0.000647120074015235,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 0,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 0,
+      "liquidity": 0,
+      "price": 0
+    },
+    "media": {
+      "type": "VIDEO",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/dcb3ef82-2562-45e5-8b64-ab565d754506-2B0F46E5-ADAE-43FF-868F-5C5420BAAFEB.mp4",
+      "position": 0
+    },
+    "mintadd": "2enpSQzqEaouvWJNpPSbVxmWFqA15j2n18vYeFpFKxfp"
+  },
+  {
+    "ticker": "PRANKIFY",
+    "name": "PRANKIFY",
+    "description": "Prankify is an AI app for creating celebrity voices and clips.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/57d20c7c-f745-49d8-87fe-891b0d4d1da8-token-media/1748217159486-nmxiqjp7-Screenshot_2025-05-25_at_5.33.55_PM.png",
+    "price": 0.000088952585999259,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 88951.977934159,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 471,
+      "liquidity": 58266.7179649528,
+      "price": 0.000088952585999259
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/63874233-3448-40b0-a862-1339e4944b52-token-media/1748217158877-gacrezp5-prankify-logo-2.png",
+      "position": 0
+    },
+    "mintadd": "84LvSZdcFTNLu3WnsksxLa3po3J9AFet9pc72V3pB1zV"
+  },
+  {
+    "ticker": "FASH",
+    "name": "FASHAI",
+    "description": "FashAI is the first AI-powered fashion app that bridges Web2 with Web3.\nIt provides personalized styling via digital assistants and onchain social engagement. Future plans include launching a Solana based token for shopping and revenue-sharing through staking, enabling true user ownership and decentralized participation.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/c940d1dc-da6e-4d58-bce1-c414d6c93107-token-media/1748039825970-j9omoy0k-App_Icon.png",
+    "price": 0.000052139046859568,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 52069.8597661913,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 372,
+      "liquidity": 89978.6627615226,
+      "price": 0.000052071912619487
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/06462bc1-0750-4487-8d25-e8dc132f9838-token-media/1748039821891-ca4bu0fm-FashAI_page-0001.jpg",
+      "position": 0
+    },
+    "mintadd": "7bXRKw7pkr4SNgeSyJyVQNaMDYvnCgCr2NwRcWJNsAaM"
+  },
+  {
+    "ticker": "CREATOR",
+    "name": "Creator",
+    "description": "🚀 Meet Creator – Your AI-Powered Content Agent!\n\nStruggling to keep up with content creation? Spending too much on writers or stuck with robotic AI-generated articles?\n\nCreator helps you find the right keywords, write SEO-optimized content in your brand’s voice, and publish https://t.co/85x3G7yqn5",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/357b1934-250d-4394-b925-54ccc4872f44-avatar_70BFF692-6A88-4E64-93B4-C6D342B59474.jpg",
+    "price": 0.000083996967438289,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 83993.3050371682,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 419,
+      "liquidity": 26426.305069531,
+      "price": 0.000083996967438289
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "CRGqUDQ4JQKx5pTqWHRpwiA95fmpuQe2ir92eBi6hgmW"
+  },
+  {
+    "ticker": "DIRA",
+    "name": "AgentHub",
+    "description": "Building infrastructure for AI agents economy \n\nhttps://aiagentsdirectory.com/",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/ceec33a6-6a62-45ed-ac93-206abad488bc-avatar_BE405A14-F501-4D8D-8AA7-F134F7407580.jpg",
+    "price": 0.00027404564273475,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 270134.044162486,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 939,
+      "liquidity": 47935.6576494329,
+      "price": 0.000270383744763167
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/bca7e30a-ece4-4d18-aab6-5049af7719a8-media_0_62731F86-AA0C-43BF-A4CB-32D356DFE800.jpg",
+      "position": 0
+    },
+    "mintadd": "CuXmQvh4DVTdWBdC2d3pNq8UXqbKJ3w9RPBTAALcKcTb"
+  },
+  {
+    "ticker": "WONDER",
+    "name": "Wonder Sites",
+    "description": "Launching my biggest startup.\nSite builder for web2 & web3 startup.\n\nBuild gated communities powered by crypto. \n\n-Build a SaaS business\n-Create a Helpdesk\n-API Docs\n-Blog \n-Directory \n-2 sided Marketplace",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/2ebd7d47-0694-4962-8ab9-c5745bbf62b3-avatar_80DB81C4-30D3-49A7-8BD0-3C7B515ABAB4.jpg",
+    "price": 0.00063711421867666,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 913673.736513962,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 1577,
+      "liquidity": 92858.5309445708,
+      "price": 0.000939911617976996
+    },
+    "media": {
+      "type": "VIDEO",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/25ebfee0-2c38-48ce-b212-9b7eba4cad6d-EAEB7903-3CFF-44E0-B149-7408F392AC4A.mp4",
+      "position": 0
+    },
+    "mintadd": "GEKjZKJZgQTCbi9evTW2GmhyamH3sq6Lid9dQMWqEcCY"
+  },
+  {
+    "ticker": "UBER",
+    "name": "Uberdotfun",
+    "description": "Launching a no-code Web3 LLM builder powered by\n@believeapp \n\nAnyone can build a Web3 wallet-integrated projects.  Join the AI revolution and build something amazing!\n\n@launchcoin $UBER +Uberdotfun https://t.co/TQlKkZ9eI7",
+    "img": "https://benpasternak.me/hosting/uber.png",
+    "price": 0.000096216190387132,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 96210.7397976015,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 3810,
+      "liquidity": 34609.6475967575,
+      "price": 0.000096216190387132
+    },
+    "media": {
+      "type": "VIDEO",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/2e969bd8-8581-4699-bb9c-930652238052-A9BB91D7-FA8B-409C-8655-D4C63D853364.mp4",
+      "position": 0
+    },
+    "mintadd": "8V6pDEmXV3iKC3nVjDUeDqMPBrTq8y69EovCxTokyyFd"
+  },
+  {
+    "ticker": "BSCREENER",
+    "name": "BelieveScreener",
+    "description": "It's been awesome watching new projects launch on @believeapp over the past few days.\nGlad many of you have found https://t.co/aHipsPqY0s useful for tracking your favorites.\n\nToday, Believe Screener is launching a project token.\nFees will go toward covering website and hosting https://t.co/2xR4SmO76o",
+    "img": "https://benpasternak.me/hosting/believescreener.png",
+    "price": 0.000202814837176575,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 0,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 0,
+      "liquidity": 0,
+      "price": 0
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "4PYijC1Xas63cxdoYnUg7SQgcg23UgNNcPmvbj6KNUSz"
+  },
+  {
+    "ticker": "DASHCOIN",
+    "name": "Worthless Dash Coins",
+    "description": "In depth Believe analytics, live feeds, leaderboard, global stats and more\n\nCheck out the dashboard at believe.xultra.fun",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/fc6ecdf0-9199-43dd-966b-198df4564fc5-avatar_AE842E33-12B8-43A8-8D20-CEF1972BD275.jpg",
+    "price": 0.000068005628127029,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 67987.9197450609,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 780,
+      "liquidity": 35297.0673966818,
+      "price": 0.000068005628127029
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/dc08ec64-86f0-44b1-b88b-6cfb7cb7ff6c-media_0_2370439F-C7EC-442F-BE22-3FDA5DE06A95.jpg",
+      "position": 0
+    },
+    "mintadd": "5GNffsi7zcKFYWF1U1PXYb8eGuheqmwydwcuajzUTM33"
+  },
+  {
+    "ticker": "WITA",
+    "name": "Who is the A-Hole",
+    "description": "WITA is an AI judge for text arguments. It reads the emotional tone, context, and escalation to help you see how the conversation went off-track, and who was responsible for it.",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/e149dead-48ec-4231-9d4e-48f8cb06f743-wita-ofo.png",
+    "price": 0.000034331597238103,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 34435.6518910694,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 655,
+      "liquidity": 16933.2739727569,
+      "price": 0.00003443845266243
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/de1cf770-4477-475e-8d2a-a3892a23bf1d-Screenshot_2025-06-16_at_10.46.56_AM.png",
+      "position": 0
+    },
+    "mintadd": "9tgTbD1QqxFPtk7XwxcjzSrYNkHpmPYPRsmg6QH8GXvL"
+  },
+  {
+    "ticker": "GPTW",
+    "name": "GPT Workspace",
+    "description": "@launchcoin $GPTW + GPT Workspace",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/280e0d96-19e5-4a88-a9de-21ee2e3ec423-avatar_1960A880-29AC-4E43-90A7-37169A1A13C1.jpg",
+    "price": 0.000322901626311716,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 323508.640160612,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 1003,
+      "liquidity": 52725.8231648566,
+      "price": 0.000323512510560646
+    },
+    "media": {
+      "type": "VIDEO",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/ecf05e14-0f80-4882-91bc-d375a0f9edd0-50BEC948-C040-41E4-8E4E-68EDCA240038.mp4",
+      "position": 0
+    },
+    "mintadd": "GcCfPKRq2n5gJZQRBRyqKu7b382igWCg4qwhfF7twLiQ"
+  },
+  {
+    "ticker": "REPLY",
+    "name": "ReplyGuys",
+    "description": "Let's try this again... test my vibe code project https://t.co/1n2wZsSlEp \n\nIt's twitter but your posts explode \n\nI haven't figured out moderation yet, so don't post crazy shit",
+    "img": "https://clout-token-metadata.s3.us-east-1.amazonaws.com/mentions/1922113289741279404.png",
+    "price": 0.00016512054693385,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 161217.975806534,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 1205,
+      "liquidity": 38009.428397796,
+      "price": 0.000166205846635256
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "M7tBg3eVTm7L1nMgoQsREF2KjBaWW6pmv2C6MUUU5i1"
+  },
+  {
+    "ticker": "BRUVS",
+    "name": "OnlyBruvs",
+    "description": "I used to doomscroll X for 3 hours daily and hate myself afterward\n\nSo I built @tryhodlapp -  it blocks distracting apps on your phone, and the only way to unlock them is by shouting “HODL.”\n\nStay focused or stay locked.\n\n@launchcoin $HODL + HODL https://t.co/jPs8Kn53hg",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/aa512b9f-4b37-47ad-a5a1-4e19183cf8f6-avatar_2DF963BE-BF21-42EB-9B38-EFE0A1217A5D.jpg",
+    "price": 0.000056866347086033,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 56865.0712327117,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 540,
+      "liquidity": 21703.5560778309,
+      "price": 0.000056866347086033
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/e0a004df-fad1-412b-ad68-78c1e4547167-media_0_5797B0CD-C028-446D-B5A6-92644AF433B3.jpg",
+      "position": 0
+    },
+    "mintadd": "8N9cKkE93grPT2ALLTQ992wwhTNXoqycsCg9Jj5wHiyW"
+  },
+  {
+    "ticker": "SCHEJ",
+    "name": "schej",
+    "description": "i quit yc to pursue my side project from college.\n\nintroducing @schej_it - the easiest way for groups to find a time to meet.\n\nit’s open-source and syncs with your calendar. https://t.co/qhn31n4gpw",
+    "img": "https://benpasternak.me/schej/schej_icon.png",
+    "price": 0.00009297847854241,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 92952.6813644543,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 574,
+      "liquidity": 30831.9059978884,
+      "price": 0.00009297847854241
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "2uHvhSasjzHm4PPAWaVpuU7yKtd4yUGYx6WK2oxutQnm"
+  },
+  {
+    "ticker": "AICREATOR",
+    "name": "sociove",
+    "description": "This is @sociovecom  \n\nAI UGC creators designed to go viral.\n\nNo actors. No filming. \n\nJust infinite hyper-realistic content creators.\n\n@launchcoin $AICREATOR + sociove https://t.co/A8hXy4MPYz",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/54e3bd75-0d7a-44ab-a5b7-4442d186dcf6-avatar_C56C4C1F-5F14-4981-9361-FFE28F6128F1.jpg",
+    "price": 0.000148523145732935,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 148516.831666375,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 817,
+      "liquidity": 32006.9710269714,
+      "price": 0.000148523145732935
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/token-media/clout/63f04fe1-ad4e-4a93-b59f-49d3327b5b5d-media_0_2CC6C693-54D4-4DCA-B32A-E3768190704B.jpg",
+      "position": 0
+    },
+    "mintadd": "GQgpvgiSzHXyST3kCYBXpykjtcqwS7QXsuif2Foc4aB2"
+  },
+  {
+    "ticker": "NINJA",
+    "name": "Ninjachat",
+    "description": "This is Ninjachat, which allows you to use top AI chat models and agents in one place, allowing you to browse the internet, analyze stocks, create images and more.\n\nAlready at 40k/mo in revenue. You can support us on @believeapp now.",
+    "img": "https://benpasternak.me/ninja/icon.jpg",
+    "price": 0.000164436656033085,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 164432.304342018,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 1047,
+      "liquidity": 32634.1996223518,
+      "price": 0.000164436656033085
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "EcvEmnCB739WLj343QxX8YwquPCwzeEYeaRZfaKN2e4o"
+  },
+  {
+    "ticker": "CRYPTOGYM",
+    "name": "CryptoGym",
+    "description": "Wether you are a crypto beginner or trench warrior.\n\nCryptoGym helps you become a better trader.",
+    "img": "https://benpasternak.me/hosting/cryptogym.jpg",
+    "price": 0.000335290745443845,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 333087.504303162,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 614,
+      "liquidity": 48273.6384753016,
+      "price": 0.000333138407578877
+    },
+    "media": {
+      "type": "VIDEO",
+      "mediaUrl": "https://benpasternak.me/hosting/cryptogym.mov",
+      "position": 0
+    },
+    "mintadd": "B6arGymLL24Wo1Wogi68DHj2HwqkxhzAh3o7ryQUJnei"
+  },
+  {
+    "ticker": "PNP",
+    "name": "PNP Exchange",
+    "description": "Permissionless Prediction Markets on Solana.\nCreate your own prediction market out of any question and trade against the bonding curve. No offchain orderbook.\n\nAll markets get settled by Perplexity Sonar API.\n\nSet settlement deadline as low as 5min and AI will settle the prediction market for you.\n\nTry now : pnp.exchange/gandalf",
+    "img": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/03400cba-7d79-46e4-9116-1e4f2ba7297e-avatar_677943A4-0F8F-4BF4-A917-4DD5768C4C17.jpg",
+    "price": 0.00124213359714559,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 0,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 0,
+      "liquidity": 0,
+      "price": 0
+    },
+    "media": {
+      "type": "",
+      "mediaUrl": "",
+      "position": 0
+    },
+    "mintadd": "ArQNTJtmxuWQ77KB7a1PmoZc5Zd25jXmXPDWBX8qVoux"
+  },
+  {
+    "ticker": "MYKU",
+    "name": "Myku",
+    "description": "New project 👀: Myku\n\nGenerate haikus from the pictures you take and send them to friends.\n\nIt’s the app that no one needs but now you have to have it. lol\n\nLet me know what you think 🙃\n",
+    "img": "https://benpasternak.me/hosting/Myku.jpg",
+    "price": 0.000083662848359271,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 83661.0280197891,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 790,
+      "liquidity": 24359.4387443111,
+      "price": 0.000083662848359271
+    },
+    "media": {
+      "type": "IMAGE",
+      "mediaUrl": "https://benpasternak.me/hosting/myku_1.png",
+      "position": 0
+    },
+    "mintadd": "HohL7oPEpzekWsWiDSa1ewohT92QZyumWnUqiUQKq6SK"
+  },
+  {
+    "ticker": "PERSOA",
+    "name": "Persoa",
+    "description": "Persoa is a new type of interactive fanfiction platform. \n\nDrop anything from idea to a novel and create engaging experiences with characters from your favorite books, shows or movies.\n\nAvailable now.",
+    "img": "https://benpasternak.me/hosting/persoa_icon.jpg",
+    "price": 0.000063279195108744,
+    "dexId": "",
+    "priceChange": {
+      "fiveH": 0,
+      "twentyFourH": 0
+    },
+    "txn": {
+      "buys": 0,
+      "sells": 0
+    },
+    "tokenomics": {
+      "marketCap": 0,
+      "volume": {
+        "fiveH": 0,
+        "twentyFourH": 0
+      },
+      "holder": 0,
+      "liquidity": 0,
+      "price": 0
+    },
+    "media": {
+      "type": "VIDEO",
+      "mediaUrl": "https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/persoa_video.mov",
+      "position": 0
+    },
+    "mintadd": "5QvAeS2Un6ZoNjyKthGYo2ZpbcVP3diTMejyA48NEHTE"
+  }
+]

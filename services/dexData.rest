@@ -1,0 +1,2 @@
+GET https://api.dexscreener.com/tokens/v1/solana/Ey59PH7Z4BFU4HjyKnyMdWt5GGN76KazTAwQihoUXRnk
+Content-Type: application/json
