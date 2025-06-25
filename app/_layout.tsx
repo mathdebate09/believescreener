@@ -6,9 +6,11 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState, useContext } from 'react';
 import 'react-native-reanimated';
 
-import { TokenContext, TokenProvider } from '@/context/tokenData';
+import { TokenContext, TokenProvider, MarketMetrics, TokenType } from '@/context/tokenData';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { fetchDexScreenerBatches } from '@/utils/fetchDexScreenerData';
+import { transformRawData } from '@/utils/transformRawData';
+import axios from 'axios';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -16,25 +18,24 @@ SplashScreen.preventAutoHideAsync();
 function Layout() {
   const colorScheme = useColorScheme();
   const [isDataLoaded, setIsDataLoaded] = useState(false);
-  const { setTokenList } = useContext(TokenContext);
+  const { setTokenList, setMarketMetrics } = useContext(TokenContext);
   const [loaded] = useFonts({
     inter: require('../assets/fonts/Inter.ttf'),
   });
 
-  useEffect(() => {
+    useEffect(() => {
     async function prepare() {
       try {
-        // Fetch your data here
-        await fetchYourData(setTokenList);
+        await fetchYourData(setTokenList, setMarketMetrics);
         setIsDataLoaded(true);
       } catch (e) {
         console.warn(e);
         setIsDataLoaded(true);
       }
     }
-
+  
     prepare();
-  }, [setTokenList]);
+  }, [setTokenList, setMarketMetrics]);
 
   useEffect(() => {
     if (loaded && isDataLoaded) {
@@ -58,14 +59,20 @@ function Layout() {
   );
 }
 
-async function fetchYourData(setTokenList: React.Dispatch<React.SetStateAction<any[]>>) {
+async function fetchYourData(
+  setTokenList: React.Dispatch<React.SetStateAction<TokenType[]>>,
+  setMarketMetrics: React.Dispatch<React.SetStateAction<MarketMetrics>>
+) {
   try {
-    const staticTokens = require('@/utils/believeAppStatic.json');
-    const updatedTokens = await fetchDexScreenerBatches(staticTokens);
-    
+    const { data: rawData } = await axios.get('https://believeapp-dummy.vercel.app/api/tokens/explore.json');
+    const transformedTokens = transformRawData(rawData);
+    const updatedTokens = await fetchDexScreenerBatches(transformedTokens);
     setTokenList(updatedTokens);
+
+    const { data: metricsData } = await axios.get('https://believeapp-dummy.vercel.app/api/dashboard/metrics.json');
+    setMarketMetrics(metricsData);
   } catch (error) {
-    console.error('Error fetching token data:', error);
+    console.error('Error fetching data:', error);
   }
 }
 

@@ -1,28 +1,28 @@
 import React, { createContext, useState } from "react";
 
-interface MarketMetrics {
-  lifetimeVolume: string;
-  coinLaunches: string;
-  activeCoins: string;
+export interface MarketMetrics {
+  lifetimeVolume: number;
+  coinLaunches: number;
+  activeCoins: number;
   totalMarketCap: {
-    total: string;
-    creatorCoins: string;
-    launchCoin: string;
+    total: number;
+    creatorCoins: number;
+    launchCoin: number;
   };
   volume24h: {
-    total: string;
-    creatorCoins: string;
-    launchCoin: string;
+    total: number;
+    creatorCoins: number;
+    launchCoin: number;
   };
   transactions24h: {
-    total: string;
-    creatorCoins: string;
-    launchCoin: string;
+    total: number;
+    creatorCoins: number;
+    launchCoin: number;
   };
   totalLiquidity: {
-    total: string;
-    creatorCoins: string;
-    launchCoin: string;
+    total: number;
+    creatorCoins: number;
+    launchCoin: number;
   };
 }
 
@@ -72,54 +72,44 @@ interface TokenContextType {
 export const TokenContext = createContext<TokenContextType>({
   tokenList: [],
   marketMetrics: {
-    lifetimeVolume: '0',
-    coinLaunches: '0',
-    activeCoins: '0',
-    totalMarketCap: { total: '0', creatorCoins: '0', launchCoin: '0' },
-    volume24h: { total: '0', creatorCoins: '0', launchCoin: '0' },
-    transactions24h: { total: '0', creatorCoins: '0', launchCoin: '0' },
-    totalLiquidity: { total: '0', creatorCoins: '0', launchCoin: '0' },
+    lifetimeVolume: 0,
+    coinLaunches: 0,
+    activeCoins: 0,
+    totalMarketCap: { total: 0, creatorCoins: 0, launchCoin: 0 },
+    volume24h: { total: 0, creatorCoins: 0, launchCoin: 0 },
+    transactions24h: { total: 0, creatorCoins: 0, launchCoin: 0 },
+    totalLiquidity: { total: 0, creatorCoins: 0, launchCoin: 0 },
   },
   setTokenList: () => {},
   setMarketMetrics: () => {},
 });
 
 export const TokenProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [tokenList, setTokenList] = useState<TokenType[]>([
-      // mintAddress: "ABC123xyz...",
-      // fiveH: '2.5',
-      // twentyFourH: '-1.2',
-      // volume: '1500000',
-      // liquidity: '2500000',
-      // price: '1.23',
-      // token: "SOL",
-      // name: "Solana",
-      // description: "Solana is a high-performance blockchain platform"
-    ]);
+  const [tokenList, setTokenList] = useState<TokenType[]>([]);
 
   const [marketMetrics, setMarketMetrics] = useState<MarketMetrics>({
-    lifetimeVolume: '3,771,943,938',
-    coinLaunches: '40,612',
-    activeCoins: '157',
+    lifetimeVolume: 0,
+    coinLaunches: 0,
+    activeCoins: 0,
     totalMarketCap: {
-      total: '231.30M',
-      creatorCoins: '116.74M',
-      launchCoin: '114.56M'
+      total: 0,
+      creatorCoins: 0,
+      launchCoin: 0
     },
     volume24h: {
-      total: '58.86M',
-      creatorCoins: '22.78M',
-      launchCoin: '36.08M'
+      total: 0,
+      creatorCoins: 0,
+      launchCoin: 0
     },
     transactions24h: {
-      total: '118.03K',
-      creatorCoins: '49.10K',
-      launchCoin: '68.93K'
+      total: 0,
+      creatorCoins: 0,
+      launchCoin: 0
     },
     totalLiquidity: {
-      total: '24.46M',
-      creatorCoins: '18.90M',
-      launchCoin: '5.56M'
+      total: 0,
+      creatorCoins: 0,
+      launchCoin: 0
     }
   });
 
