@@ -2,9 +2,9 @@ import { Tabs } from 'expo-router';
 import React, { useRef } from 'react';
 import { Platform, TouchableOpacity, Animated } from 'react-native';
 
-import { TabColors } from '@/constants/Colors';
+import { Colors, TabColors } from '@/constants/Colors';
 import { Search, Star } from 'lucide-react-native';
-import TabBarBackground from '@/data/tempcomps/ui/TabBarBackground';
+import TabBarBackground from '@/components/ui/TabBarBackground';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import Logo from '@/components/svg/Logo';
 
@@ -35,21 +35,29 @@ export default function TabLayout() {
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
             position: 'absolute',
+            backgroundColor: Colors.gray,
+            paddingBottom: 0, // Remove bottom padding
           },
-          default: {},
+          default: {
+            backgroundColor: Colors.gray,
+            paddingTop: 12, // Remove bottom padding
+          },
         }),
+        tabBarShowLabel: false, // Hide labels completely
+        tabBarIconStyle: {
+          marginBottom: 0, // Remove bottom margin from icons
+        },
       }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: '',
           tabBarIcon: ({ focused, color }) => (
             <Animated.View style={{ transform: [{ rotate }] }}>
               <Logo 
                 color={focused ? '#0da042' : color} 
-                size={28}
+                size={36}
               />
             </Animated.View>
           ),
@@ -68,15 +76,15 @@ export default function TabLayout() {
       <Tabs.Screen
         name="search"
         options={{
-          title: 'Search',
-          tabBarIcon: ({ color }) => <Search color={color} size={24} />,
+          title: '',
+          tabBarIcon: ({ color }) => <Search color={color} size={28} />,
         }}
       />
       <Tabs.Screen
         name="watchlist"
         options={{
-          title: 'Watchlist',
-          tabBarIcon: ({ color }) => <Star color={color} size={24} />,
+          title: '',
+          tabBarIcon: ({ color }) => <Star color={color} size={28} />,
         }}
       />
     </Tabs>

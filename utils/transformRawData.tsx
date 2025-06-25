@@ -82,7 +82,7 @@ function mapToTokenType(token: RawToken): TokenType {
     name: token.name || '',
     description: token.description || '',
     img: {
-      logo: '',
+      logo: token.avatarImg || '',
       banner: ''
     },
     price: typeof token.tokenPrice === 'number' ? token.tokenPrice : 0,

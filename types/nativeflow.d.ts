@@ -25,6 +25,7 @@ declare module 'nativeflowcss' {
   export const direction: StyleObject;
   export const fx: StyleObject;
   export const shadow: StyleObject;
+  export const bdr: StyleObject;
   
   // Text and decoration
   export const text: StyleObject;

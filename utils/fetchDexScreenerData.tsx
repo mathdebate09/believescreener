@@ -51,14 +51,14 @@ interface DexScreenerPair {
   info?: {
     imageUrl?: string;
     header?: string;
-    websites?: Array<{
+    websites?: {
       label: string;
       url: string;
-    }>;
-    socials?: Array<{
+    }[];
+    socials?: {
       type: string;
       url: string;
-    }>;
+    }[];
   };
 }
 
@@ -119,7 +119,7 @@ function updateTokensWithDexData(tokens: TokenType[], dexData: DexScreenerPair[]
       price: Number(dexPair.priceUsd) || 0,
       dexId: dexPair.dexId || '',
       img: {
-        logo: dexPair.info?.imageUrl || '',
+        logo: token.img.logo,
         banner: dexPair.info?.header || ''
       },
       priceChange: {

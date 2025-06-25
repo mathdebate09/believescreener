@@ -21,3 +21,8 @@ export const TabColors = {
     tabIconSelected: '#fff',
   },
 };
+
+export const Colors = {
+  black: "#040507",
+  gray: "#16171C"
+}

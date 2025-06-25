@@ -1,0 +1,5 @@
+GET https://believeapp-dummy.vercel.app/api/tokens/explore.json
+# Fetch tokens in the Believe app
+###
+GET https://believeapp-dummy.vercel.app/api/dashboard/metrics.json
+#  Fetch metrics show at the top of believescreener

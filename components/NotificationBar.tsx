@@ -1,12 +1,16 @@
 import { View } from "react-native";
 import Constants from "expo-constants";
 
-export function NotificationBar() {
+interface NotificationBarProps {
+  color?: string;
+}
+
+export function NotificationBar({ color = 'transparent' }: NotificationBarProps) {
   return (
     <View
       style={{
         height: Constants.statusBarHeight,
-        backgroundColor: 'transparent'
+        backgroundColor: color
       }}
     />
   );
