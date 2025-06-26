@@ -34,10 +34,15 @@ export interface TokenType {
     logo: string;
     banner: string;
   };
-  price: number;
+  price: {
+    usd: number;
+    sol: number;
+  }
   dexId: string;
   priceChange: {
-    fiveH: number;
+    fiveM: number;
+    oneH: number;
+    sixH: number;
     twentyFourH: number;
   };
   txn: {
@@ -47,7 +52,7 @@ export interface TokenType {
   tokenomics: {
     marketCap: number;
     volume: {
-      fiveH: number;
+      sixH: number;
       twentyFourH: number;
     };
     holder: number;
@@ -60,6 +65,7 @@ export interface TokenType {
     position: number;
   }[];
   mintadd: string;
+  watchlist: boolean;
 }
 
 interface TokenContextType {

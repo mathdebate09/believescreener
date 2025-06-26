@@ -1,68 +1,17 @@
 import { NotificationBar } from '@/components/NotificationBar';
-import { TokenContext, TokenType } from '@/context/tokenData';
-import { flex, m, p, text, bdr, h, w, align, justify, fx } from "nativeflowcss";
+import { TokenContext } from '@/context/tokenData';
+import { flex, m, p, text, bdr, h, align, justify, fx } from "nativeflowcss";
 import { useContext, useState } from "react";
-import { FlatList, Image, View, Pressable, ScrollView } from "react-native";
+import { FlatList, View, Pressable, ScrollView } from "react-native";
 import { Text } from '@/components/ui/CustomText';
 import { formatCryptoNumber } from '@/utils/formatNumbers';
 import { sortTokenList } from '@/utils/sortTokenList';
-import { Colors } from '@/constants/Colors';
+import { Colors, BoxColors } from '@/constants/Colors';
+import { TokenListView } from '@/components/TokenListView';
 
 export default function IndexScreen() {
   const { tokenList, marketMetrics } = useContext(TokenContext);
   const [sortMethod, setSortMethod] = useState<'PRICE' | 'VOL' | 'MCAP' | 'LIQ' | 'TXNS' | 'HOLDER'>('MCAP');
-
-  const renderTokenItem = ({ item }: { item: TokenType }) => (
-    <View style={[p.px_3, p.py_3, bdr.color_zinc_500, bdr.b_w_(0.5),flex.f_1, flex.row]}>
-        <View style={[flex.row, flex.f_1, align.items_center, flex.gap_2]}>
-          <Image
-          source={{ uri: item.img.logo || 'https://dpiknhejtrohakoouanp.supabase.co/storage/v1/object/public/profile-images/clout/6484b5f1-05ed-4f04-bc2d-7699ae89e4a2-avatar_307FA8A3-67DB-4EB8-B87F-11B46A9ED809.jpg' }} 
-          style={[w.w_12, h.h_12, bdr.rounded_2xl]}
-          resizeMode="contain" 
-          />
-          <View style={[flex.col, { marginTop: -3 }]}>
-            <Text weight="black" style={[text.color_zinc_100, text.fs_base]}>{item.ticker}</Text>
-            <Text weight="bold" style={[text.color_zinc_100, text.fs_xs, text.color_zinc_500]}>{item.name}</Text>
-          </View>
-        </View>
-        <View style={[flex.end, align.items_end, justify.center, flex.gap_1, { marginBottom: -3 }]}>
-          <View style={[flex.row, flex.gap_2]}>
-            <Text weight="heavy" style={[text.color_zinc_100, text.fs_xs]}>${item.price.toFixed(4)}</Text>
-            <Text weight="medium" style={[text.color_zinc_500, text.fs_xs]}>5H <Text weight="heavy" style={[text.color_zinc_100, item.priceChange.fiveH >= 0 ? text.color_green_500 : text.color_red_500]}>{item.priceChange.fiveH.toFixed(2)}%</Text></Text>
-            <Text weight="medium" style={[text.color_zinc_500, text.fs_xs]}>24H <Text weight="heavy" style={[text.color_zinc_100, item.priceChange.twentyFourH >= 0 ? text.color_green_500 : text.color_red_500]}>{item.priceChange.twentyFourH.toFixed(2)}%</Text></Text>
-          </View>
-          <View style={[flex.row, flex.gap_1]}>
-            <Text weight="medium" style={[text.color_zinc_500, { fontSize: 9}, p.p_1, bdr.w_1, bdr.color_zinc_700, bdr.rounded_md]}>LIQ <Text style={[text.color_zinc_100]}>${formatCryptoNumber(item.tokenomics.liquidity)}</Text></Text>
-            <Text weight="medium" style={[text.color_zinc_500, { fontSize: 9}, p.p_1, bdr.w_1, bdr.color_zinc_700, bdr.rounded_md]}>VOL <Text style={[text.color_zinc_100]}>${formatCryptoNumber(item.tokenomics.volume.twentyFourH)}</Text></Text>
-            <Text weight="medium" style={[text.color_zinc_500, { fontSize: 9}, p.p_1, bdr.w_1, bdr.color_zinc_700, bdr.rounded_md]}>MCAP <Text style={[text.color_zinc_100]}>${formatCryptoNumber(item.tokenomics.marketCap)}</Text></Text>
-          </View>
-        </View>
-    </View>
-  );
-
-  const BoxColors = {
-    blue: {
-      primary: '#3B82F6',
-      secondary: 'rgba(59, 130, 246, 0.7)',
-      tertiary: '#050A12' // Very dark blue hint
-    },
-    purple: {
-      primary: '#8B5CF6',
-      secondary: 'rgba(139, 92, 246, 0.7)',
-      tertiary: '#130A23' // Very dark purple hint
-    },
-    green: {
-      primary: '#10B981',
-      secondary: 'rgba(16, 185, 129, 0.7)',
-      tertiary: '#071911' // Very dark green hint
-    },
-    orange: {
-      primary: '#F97316',
-      secondary: 'rgba(249, 115, 22, 0.7)',
-      tertiary: '#1E1208' // Very dark orange hint
-    }
-  };
-
 
   const SortTab = ({ title, value }: { title: string; value: typeof sortMethod }) => (
     <Pressable 
@@ -172,7 +121,7 @@ export default function IndexScreen() {
       
       <FlatList
         data={sortTokenList(tokenList, sortMethod)}
-        renderItem={renderTokenItem}
+        renderItem={TokenListView}
         keyExtractor={(item) => item.mintadd}
         style={[flex.f_1]}
       />

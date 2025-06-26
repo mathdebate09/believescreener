@@ -85,10 +85,15 @@ function mapToTokenType(token: RawToken): TokenType {
       logo: token.avatarImg || '',
       banner: ''
     },
-    price: typeof token.tokenPrice === 'number' ? token.tokenPrice : 0,
+    price: {
+      usd: 0,
+      sol: 0,
+    },
     dexId: '',
     priceChange: {
-      fiveH: 0,
+      fiveM: 0,
+      oneH: 0,
+      sixH: 0,
       twentyFourH: 0
     },
     txn: {
@@ -98,7 +103,7 @@ function mapToTokenType(token: RawToken): TokenType {
     tokenomics: {
       marketCap: token.marketSummary?.marketCap || 0,
       volume: {
-        fiveH: 0,
+        sixH: 0,
         twentyFourH: 0
       },
       holder: token.marketSummary?.holder || 0,
@@ -112,7 +117,8 @@ function mapToTokenType(token: RawToken): TokenType {
           position: m.position || 0
         }))
       : [],
-    mintadd: token.mintAddress || ''
+    mintadd: token.mintAddress || '',
+    watchlist: false
   };
 }
 

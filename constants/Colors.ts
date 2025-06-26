@@ -24,5 +24,29 @@ export const TabColors = {
 
 export const Colors = {
   black: "#040507",
-  gray: "#16171C"
+  gray: "#16171C",
+  green: "#10B981"
 }
+
+export const BoxColors = {
+    blue: {
+      primary: '#3B82F6',
+      secondary: 'rgba(59, 130, 246, 0.7)',
+      tertiary: '#050A12' // Very dark blue hint
+    },
+    purple: {
+      primary: '#8B5CF6',
+      secondary: 'rgba(139, 92, 246, 0.7)',
+      tertiary: '#130A23' // Very dark purple hint
+    },
+    green: {
+      primary: '#10B981',
+      secondary: 'rgba(16, 185, 129, 0.7)',
+      tertiary: '#071911' // Very dark green hint
+    },
+    orange: {
+      primary: '#F97316',
+      secondary: 'rgba(249, 115, 22, 0.7)',
+      tertiary: '#1E1208' // Very dark orange hint
+    }
+  };

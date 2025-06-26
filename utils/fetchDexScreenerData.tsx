@@ -1,5 +1,5 @@
-import axios from 'axios';
 import { TokenType } from '@/context/tokenData';
+import axios from 'axios';
 
 const BATCH_SIZE = 30;
 const BASE_URL = 'https://api.dexscreener.com/latest/dex/tokens';
@@ -38,6 +38,8 @@ interface DexScreenerPair {
     m5: number;
   };
   priceChange: {
+    m5: number;
+    h1: number;
     h6: number;
     h24: number;
   };
@@ -116,14 +118,19 @@ function updateTokensWithDexData(tokens: TokenType[], dexData: DexScreenerPair[]
 
     return {
       ...token,
-      price: Number(dexPair.priceUsd) || 0,
+      price: {
+        usd: Number(dexPair.priceUsd) || 0,
+        sol: Number(dexPair.priceNative) || 0
+      },
       dexId: dexPair.dexId || '',
       img: {
         logo: token.img.logo,
-        banner: dexPair.info?.header || ''
+        banner: dexPair.info?.header ? dexPair.info.header.split('?')[0] : ''
       },
       priceChange: {
-        fiveH: Number(dexPair.priceChange?.h6) || 0,
+        fiveM: Number(dexPair.priceChange?.m5) || 0,
+        oneH: Number(dexPair.priceChange?.h1) || 0,
+        sixH: Number(dexPair.priceChange?.h6) || 0,
         twentyFourH: Number(dexPair.priceChange?.h24) || 0
       },
       txn: {
@@ -134,7 +141,7 @@ function updateTokensWithDexData(tokens: TokenType[], dexData: DexScreenerPair[]
         ...token.tokenomics,
         marketCap: Number(dexPair.marketCap) || 0,
         volume: {
-          fiveH: Number(dexPair.volume?.h6) || 0,
+          sixH: Number(dexPair.volume?.h6) || 0,
           twentyFourH: Number(dexPair.volume?.h24) || 0
         },
         liquidity: Number(dexPair.liquidity?.usd) || 0,

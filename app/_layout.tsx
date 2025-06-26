@@ -24,12 +24,14 @@ function Layout() {
   });
 
   const customTheme = {
-  ...DarkTheme,
-  colors: {
-    ...DarkTheme.colors,
-    background: Colors.black,
-  },
-};
+    ...DarkTheme,
+    colors: {
+      ...DarkTheme.colors,
+      background: Colors.black,
+      card: Colors.black,
+      border: Colors.black,
+    },
+  };
 
     useEffect(() => {
     async function prepare() {
@@ -56,15 +58,44 @@ function Layout() {
     return null;
   }
 
-  return (
-    <ThemeProvider value={customTheme}>
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="+not-found" />
-    </Stack>
-    <StatusBar style="light" />
-  </ThemeProvider>
-  );
+    return (
+      <ThemeProvider value={customTheme}>
+        <Stack 
+          screenOptions={{
+            headerShown: false,
+            animation: 'none',
+            animationDuration: 0,
+            contentStyle: {
+              backgroundColor: Colors.black,
+            },
+            presentation: 'containedTransparentModal',
+            gestureEnabled: false,
+            // Remove cardStyle and use contentStyle instead
+            // The backgroundColor can be set through contentStyle
+          }}
+        >
+          <Stack.Screen 
+            name="(tabs)" 
+            options={{ 
+              headerShown: false,
+              animation: 'none',
+            }} 
+          />
+          <Stack.Screen 
+            name="token/[mintAddress]" 
+            options={{
+              headerShown: false,
+              animation: 'none',
+              contentStyle: {
+                backgroundColor: Colors.black,
+              },
+            }}
+          />
+          <Stack.Screen name="+not-found" />
+        </Stack>
+        <StatusBar style="light" backgroundColor={Colors.black} />
+      </ThemeProvider>
+    );
 }
 
 async function fetchYourData(
