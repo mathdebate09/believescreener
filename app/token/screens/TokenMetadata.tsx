@@ -4,7 +4,7 @@ import { BoxColors, Colors } from '@/constants/Colors';
 import { TokenContext, TokenType } from '@/context/tokenData';
 import { formatCryptoNumber } from '@/utils/formatNumbers';
 import { Copy, Check, ChevronRight, ChartCandlestick, Star } from 'lucide-react-native';
-import { align, bdr, flex, fx, h, justify, m, p, text, w } from 'nativeflowcss';
+import { align, bdr, flex, fx, h, justify, m, p, text, w, z } from 'nativeflowcss';
 import React from 'react';
 import { Image, Pressable, View, Animated, ScrollView } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
