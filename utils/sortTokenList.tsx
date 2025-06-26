@@ -7,33 +7,33 @@ export const sortTokenList = (tokens: TokenType[], sortBy: SortParameter): Token
 
   switch (sortBy) {
     case 'PRICE':
-      return sortedTokens.sort((a, b) => b.price - a.price);
-    
+      return sortedTokens.sort((a, b) => Number(b.price ?? 0) - Number(a.price ?? 0));
+
     case 'VOL':
-      return sortedTokens.sort((a, b) => 
+      return sortedTokens.sort((a, b) =>
         (b.tokenomics.volume.twentyFourH) - (a.tokenomics.volume.twentyFourH)
       );
-    
+
     case 'MCAP':
-      return sortedTokens.sort((a, b) => 
+      return sortedTokens.sort((a, b) =>
         b.tokenomics.marketCap - a.tokenomics.marketCap
       );
-    
+
     case 'LIQ':
-      return sortedTokens.sort((a, b) => 
+      return sortedTokens.sort((a, b) =>
         b.tokenomics.liquidity - a.tokenomics.liquidity
       );
-    
+
     case 'TXNS':
-      return sortedTokens.sort((a, b) => 
+      return sortedTokens.sort((a, b) =>
         ((b.txn.buys + b.txn.sells) - (a.txn.buys + a.txn.sells))
       );
-    
+
     case 'HOLDER':
-      return sortedTokens.sort((a, b) => 
+      return sortedTokens.sort((a, b) =>
         b.tokenomics.holder - a.tokenomics.holder
       );
-    
+
     default:
       return sortedTokens;
   }

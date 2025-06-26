@@ -110,12 +110,12 @@ function mapToTokenType(token: RawToken): TokenType {
       liquidity: token.marketSummary?.liquidity || 0,
       price: token.marketSummary?.price || 0
     },
-    media: token.media 
+    media: token.media
       ? token.media.map(m => ({
-          type: m.type || '',
-          mediaUrl: m.mediaURL || '',
-          position: m.position || 0
-        }))
+        type: m.type || '',
+        mediaUrl: m.mediaURL || '',
+        position: m.position || 0
+      }))
       : [],
     mintadd: token.mintAddress || '',
     watchlist: false

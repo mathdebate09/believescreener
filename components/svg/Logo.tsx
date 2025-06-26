@@ -1,6 +1,11 @@
 import * as React from "react"
-import Svg, { SvgProps, Path } from "react-native-svg"
-const Logo = ({size, color}) => (
+import Svg, { Path } from "react-native-svg"
+interface LogoProps {
+  size: number | string;
+  color: string;
+}
+
+const Logo = ({ size, color }: LogoProps) => (
   <Svg
     width={size}
     height={size}

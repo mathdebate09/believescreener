@@ -31,22 +31,22 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: TabColors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarButton: (props) => <TouchableOpacity {...props} activeOpacity={1}/>,
+        tabBarButton: (props) => <TouchableOpacity {...props} activeOpacity={1} />,
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
             position: 'absolute',
             backgroundColor: Colors.gray,
-            paddingBottom: 0, // Remove bottom padding
+            paddingBottom: 0,
           },
           default: {
             backgroundColor: Colors.gray,
-            paddingTop: 12, // Remove bottom padding
+            paddingTop: 12,
           },
         }),
-        tabBarShowLabel: false, // Hide labels completely
+        tabBarShowLabel: false,
         tabBarIconStyle: {
-          marginBottom: 0, // Remove bottom margin from icons
+          marginBottom: 0,
         },
       }}>
       <Tabs.Screen
@@ -55,8 +55,8 @@ export default function TabLayout() {
           title: '',
           tabBarIcon: ({ focused, color }) => (
             <Animated.View style={{ transform: [{ rotate }] }}>
-              <Logo 
-                color={focused ? '#0da042' : color} 
+              <Logo
+                color={focused ? '#0da042' : color}
                 size={36}
               />
             </Animated.View>
@@ -65,8 +65,8 @@ export default function TabLayout() {
             <TouchableOpacity
               {...props}
               activeOpacity={1}
-              onPress={() => {
-                props.onPress?.();
+              onPress={(e) => {
+                props.onPress?.(e);
                 spin();
               }}
             />

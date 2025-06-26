@@ -68,31 +68,31 @@ export async function fetchDexScreenerBatches(tokens: TokenType[]) {
   try {
     const mintAddresses = tokens.map(token => token.mintadd).filter(Boolean);
     console.log(`Total tokens to process: ${mintAddresses.length}`); // Debug log
-    
+
     const batches = [];
     for (let i = 0; i < mintAddresses.length; i += BATCH_SIZE) {
       const batch = mintAddresses.slice(i, i + BATCH_SIZE);
       batches.push(batch);
     }
-    
+
     console.log(`Number of batches: ${batches.length}`); // Debug log
-    
+
     const allDexData = [];
     for (const batch of batches) {
       try {
         const addressString = batch.join(',');
         console.log(`Batch size: ${batch.length}`); // Debug log
         console.log(`Processing addresses: ${addressString}`);
-        
+
         const response = await axios.get<{ pairs: DexScreenerPair[] }>(
           `${BASE_URL}/${addressString}`,
           { headers }
         );
-        
+
         if (response.data?.pairs) {
           allDexData.push(...response.data.pairs);
         }
-        
+
         await new Promise(resolve => setTimeout(resolve, 200));
       } catch (batchError) {
         console.warn(`Batch request failed:`, batchError);
@@ -110,7 +110,7 @@ export async function fetchDexScreenerBatches(tokens: TokenType[]) {
 
 function updateTokensWithDexData(tokens: TokenType[], dexData: DexScreenerPair[]): TokenType[] {
   return tokens.map(token => {
-    const dexPair = dexData.find(pair => 
+    const dexPair = dexData.find(pair =>
       pair.baseToken.address.toLowerCase() === token.mintadd.toLowerCase()
     );
 

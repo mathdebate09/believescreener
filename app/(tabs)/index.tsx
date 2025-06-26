@@ -14,7 +14,7 @@ export default function IndexScreen() {
   const [sortMethod, setSortMethod] = useState<'PRICE' | 'VOL' | 'MCAP' | 'LIQ' | 'TXNS' | 'HOLDER'>('MCAP');
 
   const SortTab = ({ title, value }: { title: string; value: typeof sortMethod }) => (
-    <Pressable 
+    <Pressable
       onPress={() => setSortMethod(value)}
       style={[
         p.px_3,
@@ -25,8 +25,8 @@ export default function IndexScreen() {
         bdr.w_1,
       ]}
     >
-      <Text 
-        weight="bold" 
+      <Text
+        weight="bold"
         style={[
           text.fs_xs,
           text.color_zinc_100,
@@ -42,7 +42,7 @@ export default function IndexScreen() {
     <View style={[flex.f_1, fx.bg_color_(Colors.black)]}>
       <View style={[fx.bg_color_(Colors.gray)]}>
         <NotificationBar />
-        <ScrollView 
+        <ScrollView
           horizontal={true}
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={[p.px_3]}
@@ -58,10 +58,10 @@ export default function IndexScreen() {
           </View>
         </ScrollView>
       </View>
-      
+
       <View>
-        <ScrollView 
-          horizontal={true} 
+        <ScrollView
+          horizontal={true}
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={[p.px_3, flex.gap_5, p.py_3]}
         >
@@ -69,10 +69,10 @@ export default function IndexScreen() {
             <Text weight="medium" style={[text.fs_xs, { color: BoxColors.blue.primary }]}>24h Volume</Text>
             <Text weight="black" style={[text.color_(BoxColors.blue.primary), text.fs_lg]}>${formatCryptoNumber(marketMetrics.volume24h.total)}</Text>
             <View style={[flex.row, flex.gap_2, m.mt_2]}>
-              <Text weight="medium" style={[{fontSize: 9, color: BoxColors.blue.secondary}, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.blue.secondary }]}>
+              <Text weight="medium" style={[{ fontSize: 9, color: BoxColors.blue.secondary }, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.blue.secondary }]}>
                 Creator <Text style={[text.color_(BoxColors.blue.secondary)]}>${formatCryptoNumber(marketMetrics.volume24h.creatorCoins)}</Text>
               </Text>
-              <Text weight="medium" style={[{fontSize: 9, color: BoxColors.blue.secondary}, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.blue.secondary }]}>
+              <Text weight="medium" style={[{ fontSize: 9, color: BoxColors.blue.secondary }, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.blue.secondary }]}>
                 Launch <Text style={[text.color_(BoxColors.blue.secondary)]}>${formatCryptoNumber(marketMetrics.volume24h.launchCoin)}</Text>
               </Text>
             </View>
@@ -82,10 +82,10 @@ export default function IndexScreen() {
             <Text weight="medium" style={[text.fs_xs, { color: BoxColors.purple.primary }]}>Total Market Cap</Text>
             <Text weight="black" style={[text.color_(BoxColors.purple.primary), text.fs_lg]}>${formatCryptoNumber(marketMetrics.totalMarketCap.total)}</Text>
             <View style={[flex.row, flex.gap_2, m.mt_2]}>
-              <Text weight="medium" style={[{fontSize: 9, color: BoxColors.purple.secondary}, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.purple.secondary }]}>
+              <Text weight="medium" style={[{ fontSize: 9, color: BoxColors.purple.secondary }, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.purple.secondary }]}>
                 Active <Text style={[text.color_(BoxColors.purple.secondary)]}>{marketMetrics.activeCoins}</Text>
               </Text>
-              <Text weight="medium" style={[{fontSize: 9, color: BoxColors.purple.secondary}, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.purple.secondary }]}>
+              <Text weight="medium" style={[{ fontSize: 9, color: BoxColors.purple.secondary }, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.purple.secondary }]}>
                 Launches <Text style={[text.color_(BoxColors.purple.secondary)]}>{marketMetrics.coinLaunches}</Text>
               </Text>
             </View>
@@ -95,10 +95,10 @@ export default function IndexScreen() {
             <Text weight="medium" style={[text.fs_xs, { color: BoxColors.green.primary }]}>Total Liquidity</Text>
             <Text weight="black" style={[text.color_(BoxColors.green.primary), text.fs_lg]}>${formatCryptoNumber(marketMetrics.totalLiquidity.total)}</Text>
             <View style={[flex.row, flex.gap_2, m.mt_2]}>
-              <Text weight="medium" style={[{fontSize: 9, color: BoxColors.green.secondary}, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.green.secondary }]}>
+              <Text weight="medium" style={[{ fontSize: 9, color: BoxColors.green.secondary }, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.green.secondary }]}>
                 Creator <Text style={[text.color_(BoxColors.green.secondary)]}>${formatCryptoNumber(marketMetrics.totalLiquidity.creatorCoins)}</Text>
               </Text>
-              <Text weight="medium" style={[{fontSize: 9, color: BoxColors.green.secondary}, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.green.secondary }]}>
+              <Text weight="medium" style={[{ fontSize: 9, color: BoxColors.green.secondary }, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.green.secondary }]}>
                 Launch <Text style={[text.color_(BoxColors.green.secondary)]}>${formatCryptoNumber(marketMetrics.totalLiquidity.launchCoin)}</Text>
               </Text>
             </View>
@@ -108,17 +108,17 @@ export default function IndexScreen() {
             <Text weight="medium" style={[text.fs_xs, { color: BoxColors.orange.primary }]}>24h Transactions</Text>
             <Text weight="black" style={[text.color_(BoxColors.orange.primary), text.fs_lg]}>{formatCryptoNumber(marketMetrics.transactions24h.total)}</Text>
             <View style={[flex.row, flex.gap_2, m.mt_2]}>
-              <Text weight="medium" style={[{fontSize: 9, color: BoxColors.orange.secondary}, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.orange.secondary }]}>
+              <Text weight="medium" style={[{ fontSize: 9, color: BoxColors.orange.secondary }, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.orange.secondary }]}>
                 Creator <Text style={[text.color_(BoxColors.orange.secondary)]}>{formatCryptoNumber(marketMetrics.transactions24h.creatorCoins)}</Text>
               </Text>
-              <Text weight="medium" style={[{fontSize: 9, color: BoxColors.orange.secondary}, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.orange.secondary }]}>
+              <Text weight="medium" style={[{ fontSize: 9, color: BoxColors.orange.secondary }, p.p_1, bdr.w_1, bdr.rounded_md, { borderColor: BoxColors.orange.secondary }]}>
                 Launch <Text style={[text.color_(BoxColors.orange.secondary)]}>{formatCryptoNumber(marketMetrics.transactions24h.launchCoin)}</Text>
               </Text>
             </View>
           </View>
         </ScrollView>
       </View>
-      
+
       <FlatList
         data={sortTokenList(tokenList, sortMethod)}
         renderItem={TokenListView}

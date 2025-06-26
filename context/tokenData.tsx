@@ -86,8 +86,8 @@ export const TokenContext = createContext<TokenContextType>({
     transactions24h: { total: 0, creatorCoins: 0, launchCoin: 0 },
     totalLiquidity: { total: 0, creatorCoins: 0, launchCoin: 0 },
   },
-  setTokenList: () => {},
-  setMarketMetrics: () => {},
+  setTokenList: () => { },
+  setMarketMetrics: () => { },
 });
 
 export const TokenProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

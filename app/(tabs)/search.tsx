@@ -1,4 +1,4 @@
-import {View, Text, ViewStyle} from "react-native";
+import { View, Text, ViewStyle } from "react-native";
 import { NotificationBar } from '@/components/NotificationBar';
 import { TokenContext } from '@/context/tokenData';
 
@@ -7,7 +7,7 @@ import { useContext } from "react";
 
 export default function IndexScreen() {
   const { tokenList } = useContext(TokenContext);
-  
+
   return (
     <View style={[flex.f_1 as ViewStyle]}>
       <NotificationBar />

@@ -6,8 +6,9 @@ import { formatCryptoNumber } from '@/utils/formatNumbers';
 import { Copy, Check, ChevronRight, ChartCandlestick, Star } from 'lucide-react-native';
 import { align, bdr, flex, fx, h, justify, m, p, text, w, z } from 'nativeflowcss';
 import React from 'react';
-import { Image, Pressable, View, Animated, ScrollView } from 'react-native';
+import { Image, Pressable, View, Animated, ScrollView, Modal, Dimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import * as Clipboard from 'expo-clipboard';
 
 interface TokenMetadataProps {
   token: TokenType;
@@ -19,17 +20,17 @@ interface TokenDescriptionProps {
 
 const TokenDescription: React.FC<TokenDescriptionProps> = ({ description }) => {
   if (!description) return null;
-  
+
   const cleanDescription = description
     .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
     .replace(/<[^>]*>/g, '')
     .trim();
-  
+
   if (!cleanDescription) return null;
-  
+
   const urlRegex = /(https?:\/\/[^\s]+)/g;
   const parts = cleanDescription.split(urlRegex);
-  
+
   return (
     <View style={[p.px_4, p.py_3, bdr.rounded_lg, fx.bg_color_zinc_900, m.mx_3, m.mt_2]}>
       <Text style={[text.color_zinc_100, text.align_left, text.fs_sm, text.leading_relaxed]}>
@@ -37,8 +38,8 @@ const TokenDescription: React.FC<TokenDescriptionProps> = ({ description }) => {
           if (urlRegex.test(part)) {
             const displayUrl = part.length > 40 ? `${part.substring(0, 40)}...` : part;
             return (
-              <ExternalLink 
-                key={index} 
+              <ExternalLink
+                key={index}
                 href={part as any}
               >
                 <Text style={[text.color_blue_400, text.underline]}>
@@ -57,23 +58,27 @@ const TokenDescription: React.FC<TokenDescriptionProps> = ({ description }) => {
 export const TokenMetadata = ({ token }: TokenMetadataProps) => {
   const [imageError, setImageError] = React.useState(false);
   const [isCopied, setIsCopied] = React.useState(false);
+  const [selectedMedia, setSelectedMedia] = React.useState<string | null>(null);
   const fadeAnim = React.useRef(new Animated.Value(0)).current;
   const { setTokenList } = React.useContext(TokenContext);
   const insets = useSafeAreaInsets();
+  const { width, height } = Dimensions.get('window');
+
 
   const toggleFavouriteStatus = (mintAddress: string) => {
-    setTokenList(prevTokenList => 
-      prevTokenList.map(token => 
-        token.mintadd === mintAddress 
+    setTokenList(prevTokenList =>
+      prevTokenList.map(token =>
+        token.mintadd === mintAddress
           ? { ...token, watchlist: !token.watchlist }
           : token
       )
     );
   };
 
-  const handleCopy = () => {
+  const handleCopy = async () => {
+    await Clipboard.setStringAsync(token.mintadd);
     setIsCopied(true);
-    
+
     Animated.timing(fadeAnim, {
       toValue: 1,
       duration: 200,
@@ -92,6 +97,7 @@ export const TokenMetadata = ({ token }: TokenMetadataProps) => {
   };
 
   return (
+    <>
       <ScrollView style={[flex.f_1, p.pt_(110)]} showsVerticalScrollIndicator={false}>
         <View style={[p.px_3]}>
           <View style={[flex.row, align.items_center, justify.center, flex.gap_3]}>
@@ -102,11 +108,11 @@ export const TokenMetadata = ({ token }: TokenMetadataProps) => {
               onPress={handleCopy}
               style={[
                 text.fs_xs,
-                flex.row, 
-                align.items_center, 
-                flex.gap_2, 
-                p.px_2, 
-                p.py_1, 
+                flex.row,
+                align.items_center,
+                flex.gap_2,
+                p.px_2,
+                p.py_1,
                 bdr.rounded_lg,
                 bdr.w_1,
                 bdr.color_zinc_500
@@ -138,28 +144,28 @@ export const TokenMetadata = ({ token }: TokenMetadataProps) => {
           />
           <Text weight="bold" style={[text.color_zinc_400]}>Solana</Text>
           <ChevronRight size={12} color="#9CA3AF" />
-          
+
           {token.dexId === 'meteora' ? (
-          <>
-            <Image
-              source={require(`@/assets/images/logos/meteora.png`)}
-              style={[h.h_3, w.w_3]}
-              resizeMode='contain'
-            />
-            <Text weight="bold" style={[text.color_zinc_400]}>meteora</Text>
-          </>
+            <>
+              <Image
+                source={require(`@/assets/images/logos/meteora.png`)}
+                style={[h.h_3, w.w_3]}
+                resizeMode='contain'
+              />
+              <Text weight="bold" style={[text.color_zinc_400]}>meteora</Text>
+            </>
           ) : (
-          <>
-            <Image
-            source={require(`@/assets/images/logos/raydium.png`)}
-            style={[h.h_3, w.w_3]}
-            resizeMode='contain'
-            />
-            <Text weight="bold" style={[text.color_zinc_400]}>Raydium</Text>
-        </>
+            <>
+              <Image
+                source={require(`@/assets/images/logos/raydium.png`)}
+                style={[h.h_3, w.w_3]}
+                resizeMode='contain'
+              />
+              <Text weight="bold" style={[text.color_zinc_400]}>Raydium</Text>
+            </>
           )}
           <ChevronRight size={12} color="#9CA3AF" />
-          
+
           <Image
             source={require('@/assets/images/logos/believe.png')}
             style={[h.h_3, w.w_3]}
@@ -177,7 +183,7 @@ export const TokenMetadata = ({ token }: TokenMetadataProps) => {
           resizeMode='cover'
           onError={() => setImageError(true)}
         />
-        <View style={[flex.row, { marginHorizontal: 'auto'}, { marginTop: -20}]}>
+        <View style={[flex.row, { marginHorizontal: 'auto' }, { marginTop: -16 }]}>
           <ExternalLink
             href={`https://believe.app/coin/${token.mintadd}`}
           >
@@ -189,29 +195,29 @@ export const TokenMetadata = ({ token }: TokenMetadataProps) => {
               />
               <Text weight="bold" style={[text.fs_xs, text.color_(Colors.green)]}>
                 View on Believe App
-              </Text> 
+              </Text>
             </View>
           </ExternalLink>
           <ExternalLink
             href={`https://solscan.io/token/${token.mintadd}`}
             style={[{ marginLeft: -4 }]}
           >
-                      
+
             <View style={[p.pr_4, p.pl_2, bdr.rounded_r_(100), p.py_1, bdr.w_1, bdr.color_zinc_500, fx.bg_color_(Colors.black), flex.row, align.items_center, justify.center, flex.gap_1]}>
               <Text weight="bold" style={[text.fs_xs, text.color_zinc_100]}>
                 View on
-              </Text> 
+              </Text>
               <Image
                 source={require('@/assets/images/logos/solscan.png')}
                 style={[w.w_16]}
                 resizeMode='contain'
               />
             </View>
-            
+
           </ExternalLink>
         </View>
         <TokenDescription description={token.description} />
-            
+
         <View style={[flex.row, align.items_center, justify.between, p.px_3, p.py_4, flex.gap_4]}>
           <View style={[flex.f_1, p.p_2, bdr.rounded_lg, bdr.w_1, bdr.color_zinc_500, flex.gap_1, fx.bg_transparent, align.items_center]}>
             <Text style={[text.fs_xs, text.color_zinc_400, text.align_center]} weight="medium">
@@ -406,7 +412,7 @@ export const TokenMetadata = ({ token }: TokenMetadataProps) => {
         </View>
 
         <View style={[p.px_3, p.pb_6, flex.gap_2, flex.row, justify.around, flex.grow]}>
-          <Pressable 
+          <Pressable
             style={[flex.row, align.items_center, justify.center, p.py_3, p.px_2, bdr.rounded_full, bdr.w_1, bdr.color_yellow_500, flex.gap_2, flex.grow]}
             onPress={() => toggleFavouriteStatus(token.mintadd)}
           >
@@ -415,9 +421,9 @@ export const TokenMetadata = ({ token }: TokenMetadataProps) => {
               Favourites
             </Text>
           </Pressable>
-          
+
           <ExternalLink href={`https://axiom.trade/t/${token.mintadd}/@bscnrapp`}>
-            <View style={[ flex.row,align.items_center, justify.center, p.py_3, p.px_6, bdr.rounded_full, bdr.w_1, bdr.color_zinc_500, flex.gap_3]}>
+            <View style={[flex.row, align.items_center, justify.center, p.py_3, p.px_6, bdr.rounded_full, bdr.w_1, bdr.color_zinc_500, flex.gap_3]}>
               <ChartCandlestick size={20} color="#ECEDEE" />
               <Text style={[text.fs_xs, text.color_zinc_100]} weight="bold">
                 Trade {token.ticker}/SOL
@@ -425,6 +431,65 @@ export const TokenMetadata = ({ token }: TokenMetadataProps) => {
             </View>
           </ExternalLink>
         </View>
+
+        {/* Media Section */}
+        <View style={[p.px_3, p.pb_4]}>
+          <Text style={[text.fs_sm, text.color_zinc_100, p.pb_3]} weight="bold">
+            Media
+          </Text>
+
+          {token.media && token.media.length > 0 ? (
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={[flex.gap_3]}
+              style={[p.pb_2]}
+            >
+              {token.media.map((mediaItem, index) => (
+                <Pressable
+                  key={index}
+                  style={[
+                    w.w_32,
+                    h.h_32,
+                    bdr.rounded_lg,
+                    fx.bg_color_zinc_800,
+                    bdr.w_1,
+                    bdr.color_zinc_600
+                  ]}
+                  onPress={() => setSelectedMedia(mediaItem.mediaUrl)}
+                >
+                  <Image
+                    source={{ uri: mediaItem.mediaUrl }}
+                    style={[
+                      w.w_32,
+                      h.h_32,
+                      bdr.rounded_lg
+                    ]}
+                    resizeMode="cover"
+                    onError={() => {
+                      // Handle image load error
+                    }}
+                  />
+                </Pressable>
+              ))}
+            </ScrollView>
+          ) : (
+            <View style={[
+              p.p_4,
+              bdr.rounded_lg,
+              bdr.w_1,
+              bdr.color_zinc_600,
+              fx.bg_color_zinc_800,
+              align.items_center,
+              justify.center
+            ]}>
+              <Text style={[text.fs_sm, text.color_zinc_400, text.align_center]} weight="medium">
+                This token has no media
+              </Text>
+            </View>
+          )}
+        </View>
+
 
         <View style={[p.px_3, p.pb_4]}>
           <Text style={[text.fs_xs, text.color_zinc_500, text.align_center]} weight="medium">
@@ -435,5 +500,45 @@ export const TokenMetadata = ({ token }: TokenMetadataProps) => {
         {/* Safe Area Bottom Spacing */}
         <View style={{ height: insets.bottom + 110 }} />
       </ScrollView>
+      {/* Media Modal */}
+      <Modal
+        visible={selectedMedia !== null}
+        transparent={true}
+        animationType="fade"
+        onRequestClose={() => setSelectedMedia(null)}
+      >
+        <Pressable
+          style={[
+            flex.f_1,
+            fx.bg_color_('rgba(0,0,0,0.9)'),
+            justify.center,
+            align.items_center,
+            p.p_4
+          ]}
+          onPress={() => setSelectedMedia(null)}
+        >
+          <Pressable
+            style={[
+              w.w_full,
+              { maxWidth: width * 0.9, maxHeight: height * 0.8 },
+              bdr.rounded_lg
+            ]}
+            onPress={() => { }} // Prevent modal close when touching image
+          >
+            {selectedMedia && (
+              <Image
+                source={{ uri: selectedMedia }}
+                style={[
+                  w.w_('100%'),
+                  { aspectRatio: 0.7 },
+                  bdr.rounded_lg
+                ]}
+                resizeMode="contain"
+              />
+            )}
+          </Pressable>
+        </Pressable>
+      </Modal>
+    </>
   );
 };

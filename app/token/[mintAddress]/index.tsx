@@ -10,10 +10,10 @@ import { ChevronLeft } from 'lucide-react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/constants/Colors';
 import { TokenGraph } from '../screens/TokenGraph';
-// import TokenHolderList from '../screens/TokenHolderList';
+import { TokenHolderList } from '../screens/TokenHolderList';
 
 export default function TokenDetail() {
-  const [currentScreen, setCurrentScreen] = useState('graph');
+  const [currentScreen, setCurrentScreen] = useState('info');
   const { mintAddress } = useLocalSearchParams();
   const { tokenList } = useContext(TokenContext);
   const token = tokenList.find(t => t.mintadd === mintAddress);
@@ -161,7 +161,7 @@ export default function TokenDetail() {
       </View>
       {currentScreen === 'info' && <TokenMetadata token={token} />}
       {currentScreen === 'graph' && <TokenGraph token={token} />}
-      {/* {currentScreen === 'holder' && <TokenHolderList token={token} />} */}
+      {currentScreen === 'holder' && <TokenHolderList token={token} />}
     </View>
   );
 }

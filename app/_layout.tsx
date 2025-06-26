@@ -33,7 +33,7 @@ function Layout() {
     },
   };
 
-    useEffect(() => {
+  useEffect(() => {
     async function prepare() {
       try {
         await fetchYourData(setTokenList, setMarketMetrics);
@@ -43,7 +43,7 @@ function Layout() {
         setIsDataLoaded(true);
       }
     }
-  
+
     prepare();
   }, [setTokenList, setMarketMetrics]);
 
@@ -58,44 +58,42 @@ function Layout() {
     return null;
   }
 
-    return (
-      <ThemeProvider value={customTheme}>
-        <Stack 
-          screenOptions={{
+  return (
+    <ThemeProvider value={customTheme}>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+          animation: 'none',
+          animationDuration: 0,
+          contentStyle: {
+            backgroundColor: Colors.black,
+          },
+          presentation: 'containedTransparentModal',
+          gestureEnabled: false,
+        }}
+      >
+        <Stack.Screen
+          name="(tabs)"
+          options={{
             headerShown: false,
             animation: 'none',
-            animationDuration: 0,
+          }}
+        />
+        <Stack.Screen
+          name="token/[mintAddress]"
+          options={{
+            headerShown: false,
+            animation: 'none',
             contentStyle: {
               backgroundColor: Colors.black,
             },
-            presentation: 'containedTransparentModal',
-            gestureEnabled: false,
-            // Remove cardStyle and use contentStyle instead
-            // The backgroundColor can be set through contentStyle
           }}
-        >
-          <Stack.Screen 
-            name="(tabs)" 
-            options={{ 
-              headerShown: false,
-              animation: 'none',
-            }} 
-          />
-          <Stack.Screen 
-            name="token/[mintAddress]" 
-            options={{
-              headerShown: false,
-              animation: 'none',
-              contentStyle: {
-                backgroundColor: Colors.black,
-              },
-            }}
-          />
-          <Stack.Screen name="+not-found" />
-        </Stack>
-        <StatusBar style="light" backgroundColor={Colors.black} />
-      </ThemeProvider>
-    );
+        />
+        <Stack.Screen name="+not-found" />
+      </Stack>
+      <StatusBar style="light" backgroundColor={Colors.black} />
+    </ThemeProvider>
+  );
 }
 
 async function fetchYourData(
@@ -106,7 +104,7 @@ async function fetchYourData(
     const { data: rawData } = await axios.get('https://believeapp-dummy.vercel.app/api/tokens/explore.json');
     const transformedTokens = transformRawData(rawData);
     const updatedTokens = await fetchDexScreenerBatches(transformedTokens);
-    const sortedTokens = sortTokenList(updatedTokens, 'MCAP'); 
+    const sortedTokens = sortTokenList(updatedTokens, 'MCAP');
     setTokenList(sortedTokens);
 
     const { data: metricsData } = await axios.get('https://believeapp-dummy.vercel.app/api/dashboard/metrics.json');

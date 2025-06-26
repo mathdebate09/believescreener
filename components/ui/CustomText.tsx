@@ -37,11 +37,11 @@ export const Text = ({ children, style, weight = 'regular' }: PropsWithChildren<
   };
 
   return (
-    <NativeText 
+    <NativeText
       style={[
-        { fontFamily: fontWeightMap[weight] }, 
+        { fontFamily: fontWeightMap[weight] },
         ...(Array.isArray(style) ? style : [style])
-      ]} 
+      ]}
     >
       {children}
     </NativeText>
