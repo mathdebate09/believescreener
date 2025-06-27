@@ -1,5 +1,6 @@
-import { TokenType } from '@/context/tokenData';
 import axios from 'axios';
+
+import { TokenType } from '@/context/tokenData';
 
 const BATCH_SIZE = 30;
 const BASE_URL = 'https://api.dexscreener.com/latest/dex/tokens';

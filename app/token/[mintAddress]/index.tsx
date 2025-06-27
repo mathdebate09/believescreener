@@ -1,18 +1,19 @@
-import { useLocalSearchParams, router } from 'expo-router';
+import React, { useContext, useState, useEffect, useRef } from 'react';
 import { View, Pressable, Image, Share, Alert, Dimensions } from 'react-native';
-import { useContext, useState, useEffect, useRef } from 'react';
+import { useLocalSearchParams, router } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
+import { ChevronLeft } from 'lucide-react-native';
+import { align, bdr, flex, fx, h, justify, m, p, text, w, z } from 'nativeflowcss';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+import { Colors } from '@/constants/Colors';
 import { TokenContext, TokenType } from '@/context/tokenData';
-import { TokenMetadata } from '../screens/TokenMetadata';
 import { NotificationBar } from '@/components/NotificationBar';
 import { Text } from '@/components/ui/CustomText';
-import { align, bdr, flex, fx, h, justify, m, p, text, w, z } from 'nativeflowcss';
-import { ChevronLeft } from 'lucide-react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { Colors } from '@/constants/Colors';
 import { TokenGraph } from '../screens/TokenGraph';
 import { TokenHolderList } from '../screens/TokenHolderList';
+import { TokenMetadata } from '../screens/TokenMetadata';
 import { fetchDexScreenerBatches } from '@/utils/fetchDexScreenerData';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function TokenDetail() {
   const [currentScreen, setCurrentScreen] = useState('info');
@@ -21,14 +22,15 @@ export default function TokenDetail() {
   const [updatedToken, setUpdatedToken] = useState<TokenType | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const contextToken = tokenList.find(t => t.mintadd === mintAddress);
-      const insets = useSafeAreaInsets();
-          const screenHeight = Dimensions.get('window').height;
+
+  const insets = useSafeAreaInsets();
+  const screenHeight = Dimensions.get('window').height;
 
   const headerHeight = 110;
-    const bottomSpacing = insets.bottom + 110;
-    const disclaimerHeight = 50;
-    const availableHeight = screenHeight - headerHeight - bottomSpacing - disclaimerHeight;
-    const chartHeight = Math.max(availableHeight * 1.1, 400) + 40;
+  const bottomSpacing = insets.bottom + 110;
+  const disclaimerHeight = 50;
+  const availableHeight = screenHeight - headerHeight - bottomSpacing - disclaimerHeight;
+  const chartHeight = Math.max(availableHeight * 1.1, 400) + 40;
 
   useEffect(() => {
     if (contextToken) {
@@ -206,7 +208,7 @@ export default function TokenDetail() {
         </Pressable>
       </View>
 
-      <TokenGraph token={token} style={[currentScreen === 'graph' ? fx.opacity_100 : fx.opacity_0, currentScreen === 'graph' ? {marginBottom: 0} : {marginBottom: (-1 * chartHeight)} ]}/>
+      <TokenGraph token={token} style={[currentScreen === 'graph' ? fx.opacity_100 : fx.opacity_0, currentScreen === 'graph' ? { marginBottom: 0 } : { marginBottom: (-1 * chartHeight) }]} />
       {currentScreen === 'info' && <TokenMetadata token={token} />}
       {currentScreen === 'holder' && <TokenHolderList token={token} />}
     </View>

@@ -1,13 +1,14 @@
-import { View, FlatList, Pressable, Animated, Image } from "react-native";
-import { NotificationBar } from '@/components/NotificationBar';
-import { TokenContext, TokenType } from '@/context/tokenData';
-import { TokenListView } from '@/components/TokenListView';
-import { align, flex, fx, h, justify, p, text, bdr, w } from "nativeflowcss";
-import { useContext, useEffect, useRef, useState } from "react";
-import { Text } from '@/components/ui/CustomText';
-import { Colors } from "@/constants/Colors";
+import React, { useContext, useEffect, useRef, useState } from 'react';
+import { Animated, FlatList, Image, Pressable, View } from 'react-native';
 import { router } from 'expo-router';
+import { align, bdr, flex, fx, h, justify, p, text, w } from 'nativeflowcss';
+
+import { Colors } from '@/constants/Colors';
+import { TokenContext, TokenType } from '@/context/tokenData';
+import { NotificationBar } from '@/components/NotificationBar';
 import Logo from '@/components/svg/Logo';
+import { Text } from '@/components/ui/CustomText';
+import { TokenListView } from '@/components/TokenListView';
 import { fetchDexScreenerBatches } from '@/utils/fetchDexScreenerData';
 
 export default function IndexScreen() {

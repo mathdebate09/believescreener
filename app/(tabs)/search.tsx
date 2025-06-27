@@ -1,20 +1,20 @@
-import { View, Text, ViewStyle, TextInput, Pressable, Alert, ScrollView, FlatList } from "react-native";
+import { View, ViewStyle, TextInput, Pressable, Alert, ScrollView, FlatList } from "react-native";
+import { Text } from '@/components/ui/CustomText';
 import { NotificationBar } from '@/components/NotificationBar';
 import { TokenContext, TokenType } from '@/context/tokenData';
 import { router } from 'expo-router';
-import { flex, m, text, p, bdr, fx, w, h, align, justify } from "nativeflowcss";
+import { flex, m, text, p, bdr, fx, align, justify } from "nativeflowcss";
 import { useContext, useState, useMemo } from "react";
 import { Colors } from '@/constants/Colors';
 import { Search, Wallet, Coins } from 'lucide-react-native';
 import { TokenListView } from '@/components/TokenListView';
-import { sortTokenList } from "@/utils/sortTokenList";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function IndexScreen() {
   const { tokenList } = useContext(TokenContext);
   const [searchType, setSearchType] = useState<'wallet' | 'token'>('wallet');
   const [searchQuery, setSearchQuery] = useState('');
-    const insets = useSafeAreaInsets();
+  const insets = useSafeAreaInsets();
 
   // Filter tokens based on search query
   const filteredTokens = useMemo(() => {
@@ -234,7 +234,7 @@ export default function IndexScreen() {
           )}
         </View>
         <View style={[p.px_3, p.pb_4]}>
-          <Text style={[text.fs_xs, text.color_zinc_500, text.align_center]} weight="medium">
+          <Text weight='medium' style={[text.fs_xs, text.color_zinc_500, text.align_center]}>
             * Trade with caution. Cryptocurrency investments carry high risk.
           </Text>
         </View>

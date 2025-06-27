@@ -2,7 +2,7 @@ import { Text } from '@/components/ui/CustomText';
 import { TokenType } from '@/context/tokenData';
 import { formatCryptoNumber } from '@/utils/formatNumbers';
 import { router } from 'expo-router';
-import { align, bdr, flex, h, justify, p, text, w } from "nativeflowcss";
+import { align, bdr, flex, h, justify, p, text, w } from 'nativeflowcss';
 import { Image, TouchableOpacity, View } from 'react-native';
 
 export const TokenListView = ({ item }: { item: TokenType }) => (

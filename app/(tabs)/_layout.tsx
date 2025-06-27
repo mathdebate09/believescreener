@@ -1,11 +1,11 @@
-import { Tabs } from 'expo-router';
 import React, { useRef } from 'react';
-import { Platform, TouchableOpacity, Animated } from 'react-native';
+import { Animated, Platform, TouchableOpacity } from 'react-native';
+import { Tabs } from 'expo-router';
+import { Search, Star } from 'lucide-react-native';
 
 import { Colors, TabColors } from '@/constants/Colors';
-import { Search, Star } from 'lucide-react-native';
-import TabBarBackground from '@/components/ui/TabBarBackground';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import TabBarBackground from '@/components/ui/TabBarBackground';
 import Logo from '@/components/svg/Logo';
 
 export default function TabLayout() {

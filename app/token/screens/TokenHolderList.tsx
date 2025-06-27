@@ -1,14 +1,15 @@
-import { Text } from '@/components/ui/CustomText';
-import { align, bdr, flex, fx, h, justify, p, text, w } from 'nativeflowcss';
 import React, { useState, useEffect, useRef } from 'react';
 import { View, FlatList, Image, Pressable, Animated } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import axios from 'axios';
-import { TokenType } from '@/context/tokenData';
-import { formatCryptoNumber } from '@/utils/formatNumbers';
-import { Copy, Check } from 'lucide-react-native';
 import * as Clipboard from 'expo-clipboard';
 import { router } from 'expo-router';
+import { Copy, Check } from 'lucide-react-native';
+import { align, bdr, flex, fx, h, justify, p, text, w } from 'nativeflowcss';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import axios from 'axios';
+
+import { TokenType } from '@/context/tokenData';
+import { Text } from '@/components/ui/CustomText';
+import { formatCryptoNumber } from '@/utils/formatNumbers';
 
 interface TokenHolder {
     balance: string;
@@ -42,11 +43,12 @@ export const TokenHolderList = ({ token }: TokenMetadataProps) => {
 
     useEffect(() => {
         fetchTokenHolders();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-        const fetchTokenHolders = async (retryCount = 0) => {
+    const fetchTokenHolders = async (retryCount = 0) => {
         const maxRetries = 3;
-        
+
         try {
             setLoading(true);
             const response = await axios.get<TokenHolderResponse>(
@@ -58,19 +60,17 @@ export const TokenHolderList = ({ token }: TokenMetadataProps) => {
                     }
                 }
             );
-    
+
             setHolders(response.data.result);
             setTotalSupply(parseFloat(response.data.totalSupply));
             setError(null);
         } catch (err: any) {
-            // Check if it's a 500 error and we haven't exceeded max retries
             if (err.response?.status === 500 && retryCount < maxRetries) {
                 console.log(`500 error encountered, retrying... (${retryCount + 1}/${maxRetries})`);
-                // Wait before retrying (exponential backoff)
                 await new Promise(resolve => setTimeout(resolve, 1000 * Math.pow(2, retryCount)));
                 return fetchTokenHolders(retryCount + 1);
             }
-            
+
             setError('Failed to fetch token holders');
             console.error('Error fetching token holders:', err);
         } finally {
@@ -132,96 +132,96 @@ export const TokenHolderList = ({ token }: TokenMetadataProps) => {
     };
 
     const renderHolderItem = ({ item, index }: { item: TokenHolder; index: number }) => {
-    if (!fadeAnimRefs.current.has(item.ownerAddress)) {
-        fadeAnimRefs.current.set(item.ownerAddress, new Animated.Value(0));
-    }
-    const fadeAnim = fadeAnimRefs.current.get(item.ownerAddress)!;
+        if (!fadeAnimRefs.current.has(item.ownerAddress)) {
+            fadeAnimRefs.current.set(item.ownerAddress, new Animated.Value(0));
+        }
+        const fadeAnim = fadeAnimRefs.current.get(item.ownerAddress)!;
 
-    const handleCopy = async () => {
-        await Clipboard.setStringAsync(item.ownerAddress);
-        setCopiedAddresses(prev => new Set([...prev, item.ownerAddress]));
+        const handleCopy = async () => {
+            await Clipboard.setStringAsync(item.ownerAddress);
+            setCopiedAddresses(prev => new Set([...prev, item.ownerAddress]));
 
-        Animated.timing(fadeAnim, {
-            toValue: 1,
-            duration: 200,
-            useNativeDriver: true,
-        }).start();
-
-        setTimeout(() => {
             Animated.timing(fadeAnim, {
-                toValue: 0,
+                toValue: 1,
                 duration: 200,
                 useNativeDriver: true,
-            }).start(() => {
-                setCopiedAddresses(prev => {
-                    const newSet = new Set(prev);
-                    newSet.delete(item.ownerAddress);
-                    return newSet;
+            }).start();
+
+            setTimeout(() => {
+                Animated.timing(fadeAnim, {
+                    toValue: 0,
+                    duration: 200,
+                    useNativeDriver: true,
+                }).start(() => {
+                    setCopiedAddresses(prev => {
+                        const newSet = new Set(prev);
+                        newSet.delete(item.ownerAddress);
+                        return newSet;
+                    });
                 });
-            });
-        }, 1500);
-    };
+            }, 1500);
+        };
 
-    const handleViewPortfolio = () => {
-        router.push(`/portfolio/${item.ownerAddress}` as any);
-    };
+        const handleViewPortfolio = () => {
+            router.push(`/portfolio/${item.ownerAddress}` as any);
+        };
 
-    const isCopied = copiedAddresses.has(item.ownerAddress);
+        const isCopied = copiedAddresses.has(item.ownerAddress);
 
-    return (
-        <View style={[p.p_3, bdr.color_zinc_500, bdr.b_w_(0.5)]}>
-            <View style={[flex.row, justify.between, align.items_center]}>
-                <View style={[flex.f_1]}>
-                    <View style={[flex.row, align.items_center, flex.gap_2]}>
-                        <Text style={[text.fs_sm, text.color_zinc_300]} weight="medium">
-                            {formatAddress(item.ownerAddress)}
+        return (
+            <View style={[p.p_3, bdr.color_zinc_500, bdr.b_w_(0.5)]}>
+                <View style={[flex.row, justify.between, align.items_center]}>
+                    <View style={[flex.f_1]}>
+                        <View style={[flex.row, align.items_center, flex.gap_2]}>
+                            <Text style={[text.fs_sm, text.color_zinc_300]} weight="medium">
+                                {formatAddress(item.ownerAddress)}
+                            </Text>
+                            <Pressable
+                                onPress={handleCopy}
+                                style={[p.p_1, bdr.rounded_sm]}
+                            >
+                                {isCopied ? (
+                                    <Animated.View style={[flex.row, align.items_center, { opacity: fadeAnim }]}>
+                                        <Check size={12} color="#9CA3AF" />
+                                    </Animated.View>
+                                ) : (
+                                    <Copy size={12} color="#71717a" />
+                                )}
+                            </Pressable>
+                        </View>
+                        <Text style={[text.fs_xs, text.color_zinc_500]}>
+                            {item.percentageRelativeToTotalSupply.toFixed(2)}%
                         </Text>
+                    </View>
+                    <View style={[align.items_center, justify.center, flex.gap_2, flex.row]}>
+                        <View style={[align.items_end, flex.gap_1]}>
+                            <Text style={[text.fs_sm, text.color_zinc_300]} weight="medium">
+                                {formatCryptoNumber(Number(item.balanceFormatted))}
+                            </Text>
+                            <View style={[fx.bg_color_zinc_100, w.w_14, h.h_2, bdr.rounded_full]}>
+                                <View style={[fx.bg_color_zinc_600, w.w_(`${((Number(item.balanceFormatted) / totalSupply) * 600)}`), h.h_2, bdr.rounded_full]}></View>
+                            </View>
+                        </View>
                         <Pressable
-                            onPress={handleCopy}
-                            style={[p.p_1, bdr.rounded_sm]}
+                            onPress={handleViewPortfolio}
+                            style={[
+                                p.px_3,
+                                p.py_2,
+                                bdr.rounded_md,
+                                { backgroundColor: '#1e293b' },
+                                bdr.w_1,
+                                { borderColor: '#3b82f6' }
+                            ]}
                         >
-                            {isCopied ? (
-                                <Animated.View style={[flex.row, align.items_center, { opacity: fadeAnim }]}>
-                                    <Check size={12} color="#9CA3AF" />
-                                </Animated.View>
-                            ) : (
-                                <Copy size={12} color="#71717a" />
-                            )}
+                            <Text style={[text.fs_xs, { color: '#3b82f6' }]} weight="medium">
+                                Portfolio
+                            </Text>
                         </Pressable>
                     </View>
-                    <Text style={[text.fs_xs, text.color_zinc_500]}>
-                        {item.percentageRelativeToTotalSupply.toFixed(2)}%
-                    </Text>
-                </View>
-                <View style={[align.items_center, justify.center, flex.gap_2, flex.row]}>
-                    <View style={[align.items_end, flex.gap_1]}>
-                        <Text style={[text.fs_sm, text.color_zinc_300]} weight="medium">
-                            {formatCryptoNumber(Number(item.balanceFormatted))}
-                        </Text>
-                        <View style={[fx.bg_color_zinc_100, w.w_14, h.h_2, bdr.rounded_full]}>
-                            <View style={[fx.bg_color_zinc_600, w.w_(`${((Number(item.balanceFormatted) / totalSupply) * 600)}`), h.h_2, bdr.rounded_full]}></View>
-                        </View>
-                    </View>
-                    <Pressable
-                        onPress={handleViewPortfolio}
-                        style={[
-                            p.px_3,
-                            p.py_2,
-                            bdr.rounded_md,
-                            { backgroundColor: '#1e293b' },
-                            bdr.w_1,
-                            { borderColor: '#3b82f6' }
-                        ]}
-                    >
-                        <Text style={[text.fs_xs, { color: '#3b82f6' }]} weight="medium">
-                            Portfolio
-                        </Text>
-                    </Pressable>
                 </View>
             </View>
-        </View>
-    );
-};
+        );
+    };
 
     const renderHeader = () => (
         <View style={[p.px_3, p.pb_4]}>

@@ -1,14 +1,15 @@
-import { ExternalLink } from '@/components/ExternalLink';
-import { Text } from '@/components/ui/CustomText';
-import { BoxColors, Colors } from '@/constants/Colors';
-import { TokenContext, TokenType } from '@/context/tokenData';
-import { formatCryptoNumber } from '@/utils/formatNumbers';
-import { Copy, Check, ChevronRight, ChartCandlestick, Star } from 'lucide-react-native';
-import { align, bdr, flex, fx, h, justify, m, p, text, w, z } from 'nativeflowcss';
 import React from 'react';
 import { Image, Pressable, View, Animated, ScrollView, Modal, Dimensions } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Clipboard from 'expo-clipboard';
+import { Copy, Check, ChevronRight, ChartCandlestick, Star } from 'lucide-react-native';
+import { align, bdr, flex, fx, h, justify, m, p, text, w } from 'nativeflowcss';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+import { BoxColors, Colors } from '@/constants/Colors';
+import { TokenContext, TokenType } from '@/context/tokenData';
+import { ExternalLink } from '@/components/ExternalLink';
+import { Text } from '@/components/ui/CustomText';
+import { formatCryptoNumber } from '@/utils/formatNumbers';
 
 interface TokenMetadataProps {
   token: TokenType;
@@ -152,7 +153,7 @@ export const TokenMetadata = ({ token }: TokenMetadataProps) => {
                 style={[h.h_3, w.w_3]}
                 resizeMode='contain'
               />
-              <Text weight="bold" style={[text.color_zinc_400]}>meteora</Text>
+              <Text weight="bold" style={[text.color_zinc_400]}>Meteora</Text>
             </>
           ) : (
             <>

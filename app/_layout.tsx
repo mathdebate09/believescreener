@@ -1,17 +1,17 @@
+import { useEffect, useState, useContext } from 'react';
 import { DarkTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect, useState, useContext } from 'react';
+import axios from 'axios';
 import 'react-native-reanimated';
 
+import { Colors } from '@/constants/Colors';
 import { TokenContext, TokenProvider, MarketMetrics, TokenType } from '@/context/tokenData';
 import { fetchDexScreenerBatches } from '@/utils/fetchDexScreenerData';
-import { transformRawData } from '@/utils/transformRawData';
-import axios from 'axios';
-import { Colors } from '@/constants/Colors';
 import { sortTokenList } from '@/utils/sortTokenList';
+import { transformRawData } from '@/utils/transformRawData';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();

@@ -1,17 +1,18 @@
-import { useLocalSearchParams, router } from 'expo-router';
-import { View, Pressable, Image, Share, Alert, Animated, ScrollView, Dimensions } from 'react-native';
-import { useContext, useEffect, useState, useRef } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
+import { Alert, Animated, Dimensions, Image, Pressable, ScrollView, Share, View } from 'react-native';
+import * as Clipboard from 'expo-clipboard';
+import { router, useLocalSearchParams } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
+import { Check, ChevronLeft, Copy } from 'lucide-react-native';
+import { align, bdr, flex, fx, h, justify, m, p, text, w, z } from 'nativeflowcss';
+import { PieChart } from 'react-native-chart-kit';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+import { Colors } from '@/constants/Colors';
 import { TokenContext } from '@/context/tokenData';
 import { NotificationBar } from '@/components/NotificationBar';
 import { Text } from '@/components/ui/CustomText';
-import { align, bdr, flex, fx, h, justify, m, p, text, w, z } from 'nativeflowcss';
-import { ChevronLeft, Copy, Check } from 'lucide-react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { Colors } from '@/constants/Colors';
-import * as Clipboard from 'expo-clipboard';
 import { formatCryptoNumber } from '@/utils/formatNumbers';
-import { PieChart } from 'react-native-chart-kit';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 interface HeliusToken {
   interface: string;
@@ -136,7 +137,7 @@ export default function PortfolioDetail() {
   const [copiedAddress, setCopiedAddress] = useState<boolean>(false);
   const [copiedTokens, setCopiedTokens] = useState<Set<string>>(new Set());
   const spinValue = useRef(new Animated.Value(0)).current;
-    const insets = useSafeAreaInsets();
+  const insets = useSafeAreaInsets();
 
   useEffect(() => {
     if (loading) {
@@ -499,15 +500,15 @@ export default function PortfolioDetail() {
               </Text>
             )}
           </View>
-          
-      <View style={[p.px_3, p.pb_4]}>
-                <Text style={[text.fs_xs, text.color_zinc_500, text.align_center]} weight="medium">
-                  * Trade with caution. Cryptocurrency investments carry high risk.
-                </Text>
-              </View>
-      
-              {/* Safe Area Bottom Spacing */}
-              <View style={{ height: insets.bottom }} />
+
+          <View style={[p.px_3, p.pb_4]}>
+            <Text style={[text.fs_xs, text.color_zinc_500, text.align_center]} weight="medium">
+              * Trade with caution. Cryptocurrency investments carry high risk.
+            </Text>
+          </View>
+
+          {/* Safe Area Bottom Spacing */}
+          <View style={{ height: insets.bottom }} />
         </ScrollView>
       )}
 

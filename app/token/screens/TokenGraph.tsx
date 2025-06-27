@@ -1,11 +1,12 @@
-import { Text } from '@/components/ui/CustomText';
-import { Colors } from '@/constants/Colors';
-import { TokenType } from '@/context/tokenData';
-import { flex, fx, p, text } from 'nativeflowcss';
 import React, { useState } from 'react';
-import { View, ScrollView, Dimensions, ActivityIndicator } from 'react-native';
+import { ActivityIndicator, Dimensions, ScrollView, View } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { flex, fx, p, text } from 'nativeflowcss';
+
+import { Colors } from '@/constants/Colors';
+import { TokenType } from '@/context/tokenData';
+import { Text } from '@/components/ui/CustomText';
 
 interface TokenMetadataProps {
     token: TokenType;
@@ -114,7 +115,6 @@ export const TokenGraph = ({ token, style = [] }: TokenMetadataProps & { style?:
     const screenHeight = Dimensions.get('window').height;
     const [isLoading, setIsLoading] = useState(true);
 
-    // Calculate responsive height
     const headerHeight = 110;
     const bottomSpacing = insets.bottom + 110;
     const disclaimerHeight = 50;
@@ -152,7 +152,6 @@ export const TokenGraph = ({ token, style = [] }: TokenMetadataProps & { style?:
                             setIsLoading(false);
                         }}
                         onMessage={(event) => {
-                            // Handle messages from WebView if needed
                             console.log('WebView message:', event.nativeEvent.data);
                         }}
                         originWhitelist={['*']}

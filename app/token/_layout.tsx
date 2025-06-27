@@ -1,5 +1,6 @@
 import { Stack } from 'expo-router';
 import { View, StyleSheet } from 'react-native';
+
 import { Colors } from '@/constants/Colors';
 
 export default function TokenLayout() {

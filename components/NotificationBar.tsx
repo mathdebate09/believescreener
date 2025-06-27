@@ -1,5 +1,5 @@
-import { View } from "react-native";
-import Constants from "expo-constants";
+import { View } from 'react-native';
+import Constants from 'expo-constants';
 
 interface NotificationBarProps {
   color?: string;

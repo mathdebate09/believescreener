@@ -1,14 +1,15 @@
-import { NotificationBar } from '@/components/NotificationBar';
-import { TokenContext, TokenType } from '@/context/tokenData';
-import { flex, m, p, text, bdr, h, align, justify, fx } from "nativeflowcss";
-import { useContext, useState, useEffect, useRef } from "react";
-import { FlatList, View, Pressable, ScrollView } from "react-native";
-import { Text } from '@/components/ui/CustomText';
-import { formatCryptoNumber } from '@/utils/formatNumbers';
-import { sortTokenList } from '@/utils/sortTokenList';
+import React, { useContext, useState, useEffect, useRef } from 'react';
+import { FlatList, View, Pressable, ScrollView } from 'react-native';
+import { flex, m, p, text, bdr, align, justify, fx } from 'nativeflowcss';
+
 import { Colors, BoxColors } from '@/constants/Colors';
+import { TokenContext, TokenType } from '@/context/tokenData';
+import { NotificationBar } from '@/components/NotificationBar';
+import { Text } from '@/components/ui/CustomText';
 import { TokenListView } from '@/components/TokenListView';
 import { fetchDexScreenerBatches } from '@/utils/fetchDexScreenerData';
+import { formatCryptoNumber } from '@/utils/formatNumbers';
+import { sortTokenList } from '@/utils/sortTokenList';
 
 export default function IndexScreen() {
   const { tokenList, marketMetrics } = useContext(TokenContext);
@@ -20,7 +21,6 @@ export default function IndexScreen() {
     setUpdatedTokenList(tokenList);
   }, [tokenList]);
 
-  // Setup constant loop for updating token data
   useEffect(() => {
     const updateTokenData = async () => {
       if (updatedTokenList.length > 0) {
@@ -35,7 +35,6 @@ export default function IndexScreen() {
     };
 
     updateTokenData();
-
     intervalRef.current = setInterval(updateTokenData, 6000) as unknown as NodeJS.Timeout;
 
     return () => {
@@ -43,7 +42,7 @@ export default function IndexScreen() {
         clearInterval(intervalRef.current);
       }
     };
-  }, [updatedTokenList.length]);
+  }, [updatedTokenList, updatedTokenList.length]);
 
   const SortTab = ({ title, value }: { title: string; value: typeof sortMethod }) => (
     <Pressable
@@ -133,6 +132,7 @@ export default function IndexScreen() {
         </ScrollView>
       </View>
 
+      {/* Sort Selection Tabs */}
       <View>
         <ScrollView
           horizontal={true}
