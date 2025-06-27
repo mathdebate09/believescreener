@@ -1,19 +1,50 @@
 import { View, FlatList, Pressable, Animated, Image } from "react-native";
 import { NotificationBar } from '@/components/NotificationBar';
-import { TokenContext } from '@/context/tokenData';
+import { TokenContext, TokenType } from '@/context/tokenData';
 import { TokenListView } from '@/components/TokenListView';
-import { align, flex, fx, h, justify, m, p, text, bdr, w } from "nativeflowcss";
-import { useContext, useEffect, useRef } from "react";
+import { align, flex, fx, h, justify, p, text, bdr, w } from "nativeflowcss";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Text } from '@/components/ui/CustomText';
 import { Colors } from "@/constants/Colors";
 import { router } from 'expo-router';
 import Logo from '@/components/svg/Logo';
+import { fetchDexScreenerBatches } from '@/utils/fetchDexScreenerData';
 
 export default function IndexScreen() {
   const { tokenList } = useContext(TokenContext);
+  const [updatedTokenList, setUpdatedTokenList] = useState<TokenType[]>(tokenList);
   const spinValue = useRef(new Animated.Value(0)).current;
+  const intervalRef = useRef<number | null>(null);
 
-  const watchlistTokens = tokenList.filter(token => token.watchlist === true);
+  const watchlistTokens = updatedTokenList.filter(token => token.watchlist === true);
+
+  useEffect(() => {
+    setUpdatedTokenList(tokenList);
+  }, [tokenList]);
+
+  useEffect(() => {
+    const updateTokenData = async () => {
+      if (updatedTokenList.length > 0) {
+        console.log('Updating watchlist token data with DexScreener...');
+        try {
+          const updatedTokens = await fetchDexScreenerBatches(updatedTokenList);
+          setUpdatedTokenList(updatedTokens);
+        } catch (error) {
+          console.error('Error updating watchlist token data:', error);
+        }
+      }
+    };
+
+    updateTokenData();
+
+    intervalRef.current = setInterval(updateTokenData, 5000);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [updatedTokenList, updatedTokenList.length]);
 
   useEffect(() => {
     if (watchlistTokens.length === 0) {

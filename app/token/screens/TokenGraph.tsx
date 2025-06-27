@@ -109,7 +109,7 @@ const createChartHTML = (tokenAddress: string) => `
 </html>
 `;
 
-export const TokenGraph = ({ token }: TokenMetadataProps) => {
+export const TokenGraph = ({ token, style = [] }: TokenMetadataProps & { style?: any[] }) => {
     const insets = useSafeAreaInsets();
     const screenHeight = Dimensions.get('window').height;
     const [isLoading, setIsLoading] = useState(true);
@@ -122,7 +122,7 @@ export const TokenGraph = ({ token }: TokenMetadataProps) => {
     const chartHeight = Math.max(availableHeight * 1.1, 400);
 
     return (
-        <View style={[flex.f_1, fx.bg_color_(Colors.black)]}>
+        <View style={[flex.f_1, fx.bg_color_(Colors.black), ...style]}>
             <ScrollView
                 style={[flex.f_1, p.pt_(110)]}
                 showsVerticalScrollIndicator={false}

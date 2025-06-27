@@ -1,7 +1,7 @@
 import { useLocalSearchParams, router } from 'expo-router';
-import { View, Pressable, Image, Share, Alert } from 'react-native';
-import { useContext, useState } from 'react';
-import { TokenContext } from '@/context/tokenData';
+import { View, Pressable, Image, Share, Alert, Dimensions } from 'react-native';
+import { useContext, useState, useEffect, useRef } from 'react';
+import { TokenContext, TokenType } from '@/context/tokenData';
 import { TokenMetadata } from '../screens/TokenMetadata';
 import { NotificationBar } from '@/components/NotificationBar';
 import { Text } from '@/components/ui/CustomText';
@@ -11,12 +11,59 @@ import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/constants/Colors';
 import { TokenGraph } from '../screens/TokenGraph';
 import { TokenHolderList } from '../screens/TokenHolderList';
+import { fetchDexScreenerBatches } from '@/utils/fetchDexScreenerData';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function TokenDetail() {
   const [currentScreen, setCurrentScreen] = useState('info');
   const { mintAddress } = useLocalSearchParams();
   const { tokenList } = useContext(TokenContext);
-  const token = tokenList.find(t => t.mintadd === mintAddress);
+  const [updatedToken, setUpdatedToken] = useState<TokenType | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const contextToken = tokenList.find(t => t.mintadd === mintAddress);
+      const insets = useSafeAreaInsets();
+          const screenHeight = Dimensions.get('window').height;
+
+  const headerHeight = 110;
+    const bottomSpacing = insets.bottom + 110;
+    const disclaimerHeight = 50;
+    const availableHeight = screenHeight - headerHeight - bottomSpacing - disclaimerHeight;
+    const chartHeight = Math.max(availableHeight * 1.1, 400) + 40;
+
+  useEffect(() => {
+    if (contextToken) {
+      setUpdatedToken(contextToken);
+    }
+  }, [contextToken]);
+
+  useEffect(() => {
+    const updateTokenData = async () => {
+      if (contextToken) {
+        console.log(`Updating single token data for ${contextToken.name}...`);
+        try {
+          const updatedTokens = await fetchDexScreenerBatches([contextToken]);
+          if (updatedTokens.length > 0) {
+            setUpdatedToken(updatedTokens[0]);
+          }
+        } catch (error) {
+          console.error('Error updating single token data:', error);
+        }
+      }
+    };
+
+    if (contextToken) {
+      updateTokenData();
+      intervalRef.current = setInterval(updateTokenData, 5000);
+    }
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [contextToken, contextToken?.mintadd]);
+
+  const token = updatedToken || contextToken;
 
   if (!token) {
     return null;
@@ -41,8 +88,7 @@ export default function TokenDetail() {
 
   return (
     <View style={[flex.f_1, fx.bg_color_(Colors.black), h.h_('100%')]}>
-      <View style={[fx.bg_color_(Colors.gray),
-      z.index_10]}>
+      <View style={[fx.bg_color_(Colors.gray), z.index_10]}>
         <NotificationBar />
         <View style={[flex.row, flex.gap_3, align.items_center, justify.between, p.px_3, h.h_20]}>
           <Pressable
@@ -70,13 +116,13 @@ export default function TokenDetail() {
           </Pressable>
         </View>
       </View>
+
       {/* Floating Tab Navigation */}
       <View style={[
         flex.row,
         fx.bg_color_zinc_900,
         bdr.rounded_full,
         p.p_1,
-
         bdr.w_1,
         bdr.color_zinc_700,
         fx.bg_transparent,
@@ -159,8 +205,9 @@ export default function TokenDetail() {
           </Text>
         </Pressable>
       </View>
+
+      <TokenGraph token={token} style={[currentScreen === 'graph' ? fx.opacity_100 : fx.opacity_0, currentScreen === 'graph' ? {marginBottom: 0} : {marginBottom: (-1 * chartHeight)} ]}/>
       {currentScreen === 'info' && <TokenMetadata token={token} />}
-      {currentScreen === 'graph' && <TokenGraph token={token} />}
       {currentScreen === 'holder' && <TokenHolderList token={token} />}
     </View>
   );
