@@ -11,6 +11,7 @@ import { Colors } from '@/constants/Colors';
 import * as Clipboard from 'expo-clipboard';
 import { formatCryptoNumber } from '@/utils/formatNumbers';
 import { PieChart } from 'react-native-chart-kit';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 interface HeliusToken {
   interface: string;
@@ -135,6 +136,7 @@ export default function PortfolioDetail() {
   const [copiedAddress, setCopiedAddress] = useState<boolean>(false);
   const [copiedTokens, setCopiedTokens] = useState<Set<string>>(new Set());
   const spinValue = useRef(new Animated.Value(0)).current;
+    const insets = useSafeAreaInsets();
 
   useEffect(() => {
     if (loading) {
@@ -497,6 +499,15 @@ export default function PortfolioDetail() {
               </Text>
             )}
           </View>
+          
+      <View style={[p.px_3, p.pb_4]}>
+                <Text style={[text.fs_xs, text.color_zinc_500, text.align_center]} weight="medium">
+                  * Trade with caution. Cryptocurrency investments carry high risk.
+                </Text>
+              </View>
+      
+              {/* Safe Area Bottom Spacing */}
+              <View style={{ height: insets.bottom }} />
         </ScrollView>
       )}
 
