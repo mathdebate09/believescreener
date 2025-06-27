@@ -77,24 +77,6 @@ export default function IndexScreen() {
         <ScrollView
           horizontal={true}
           showsHorizontalScrollIndicator={false}
-          contentContainerStyle={[p.px_3]}
-          style={[h.h_20]}
-        >
-          <View style={[flex.row, flex.gap_3, align.items_center, justify.center]}>
-            <SortTab title="Price" value="PRICE" />
-            <SortTab title="Volume" value="VOL" />
-            <SortTab title="Market Cap" value="MCAP" />
-            <SortTab title="Liquidity" value="LIQ" />
-            <SortTab title="Transactions" value="TXNS" />
-            <SortTab title="Holders" value="HOLDER" />
-          </View>
-        </ScrollView>
-      </View>
-
-      <View>
-        <ScrollView
-          horizontal={true}
-          showsHorizontalScrollIndicator={false}
           contentContainerStyle={[p.px_3, flex.gap_5, p.py_3]}
         >
           <View style={[p.p_3, bdr.w_1, bdr.rounded_xl, { borderColor: BoxColors.blue.secondary }, fx.bg_color_(BoxColors.blue.tertiary)]}>
@@ -147,6 +129,24 @@ export default function IndexScreen() {
                 Launch <Text style={[text.color_(BoxColors.orange.secondary)]}>{formatCryptoNumber(marketMetrics.transactions24h.launchCoin)}</Text>
               </Text>
             </View>
+          </View>
+        </ScrollView>
+      </View>
+
+      <View>
+        <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={[p.px_3]}
+          style={[p.py_3]}
+        >
+          <View style={[flex.row, flex.gap_3, align.items_center, justify.center]}>
+            <SortTab title="Price" value="PRICE" />
+            <SortTab title="Volume" value="VOL" />
+            <SortTab title="Market Cap" value="MCAP" />
+            <SortTab title="Liquidity" value="LIQ" />
+            <SortTab title="Transactions" value="TXNS" />
+            <SortTab title="Holders" value="HOLDER" />
           </View>
         </ScrollView>
       </View>
