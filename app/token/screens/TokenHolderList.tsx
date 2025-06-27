@@ -8,6 +8,7 @@ import { TokenType } from '@/context/tokenData';
 import { formatCryptoNumber } from '@/utils/formatNumbers';
 import { Copy, Check } from 'lucide-react-native';
 import * as Clipboard from 'expo-clipboard';
+import { router } from 'expo-router';
 
 interface TokenHolder {
     balance: string;
@@ -81,7 +82,6 @@ export const TokenHolderList = ({ token }: TokenMetadataProps) => {
         return `${address.slice(0, 4)}.....${address.slice(-4)}`;
     };
 
-    // Calculate statistics
     const getHolderStats = () => {
         const top10Percentage = holders.slice(0, 10).reduce((sum, holder) => sum + holder.percentageRelativeToTotalSupply, 0);
         const holdersAbove1Percent = holders.filter(holder => holder.percentageRelativeToTotalSupply > 1).length;
@@ -132,65 +132,69 @@ export const TokenHolderList = ({ token }: TokenMetadataProps) => {
     };
 
     const renderHolderItem = ({ item, index }: { item: TokenHolder; index: number }) => {
-        // Get or create fade animation for this specific address
-        if (!fadeAnimRefs.current.has(item.ownerAddress)) {
-            fadeAnimRefs.current.set(item.ownerAddress, new Animated.Value(0));
-        }
-        const fadeAnim = fadeAnimRefs.current.get(item.ownerAddress)!;
+    if (!fadeAnimRefs.current.has(item.ownerAddress)) {
+        fadeAnimRefs.current.set(item.ownerAddress, new Animated.Value(0));
+    }
+    const fadeAnim = fadeAnimRefs.current.get(item.ownerAddress)!;
 
-        const handleCopy = async () => {
-            await Clipboard.setStringAsync(item.ownerAddress);
-            setCopiedAddresses(prev => new Set([...prev, item.ownerAddress]));
+    const handleCopy = async () => {
+        await Clipboard.setStringAsync(item.ownerAddress);
+        setCopiedAddresses(prev => new Set([...prev, item.ownerAddress]));
 
+        Animated.timing(fadeAnim, {
+            toValue: 1,
+            duration: 200,
+            useNativeDriver: true,
+        }).start();
+
+        setTimeout(() => {
             Animated.timing(fadeAnim, {
-                toValue: 1,
+                toValue: 0,
                 duration: 200,
                 useNativeDriver: true,
-            }).start();
-
-            setTimeout(() => {
-                Animated.timing(fadeAnim, {
-                    toValue: 0,
-                    duration: 200,
-                    useNativeDriver: true,
-                }).start(() => {
-                    setCopiedAddresses(prev => {
-                        const newSet = new Set(prev);
-                        newSet.delete(item.ownerAddress);
-                        return newSet;
-                    });
+            }).start(() => {
+                setCopiedAddresses(prev => {
+                    const newSet = new Set(prev);
+                    newSet.delete(item.ownerAddress);
+                    return newSet;
                 });
-            }, 1500);
-        };
+            });
+        }, 1500);
+    };
 
-        const isCopied = copiedAddresses.has(item.ownerAddress);
+    const handleViewPortfolio = () => {
+        router.push(`/portfolio/${item.ownerAddress}` as any);
+    };
 
-        return (
-            <View style={[p.p_3, bdr.color_zinc_500, bdr.b_w_(0.5)]}>
-                <View style={[flex.row, justify.between, align.items_center]}>
-                    <View style={[flex.f_1]}>
-                        <View style={[flex.row, align.items_center, flex.gap_2]}>
-                            <Text style={[text.fs_sm, text.color_zinc_300]} weight="medium">
-                                {formatAddress(item.ownerAddress)}
-                            </Text>
-                            <Pressable
-                                onPress={handleCopy}
-                                style={[p.p_1, bdr.rounded_sm]}
-                            >
-                                {isCopied ? (
-                                    <Animated.View style={[flex.row, align.items_center, { opacity: fadeAnim }]}>
-                                        <Check size={12} color="#9CA3AF" />
-                                    </Animated.View>
-                                ) : (
-                                    <Copy size={12} color="#71717a" />
-                                )}
-                            </Pressable>
-                        </View>
-                        <Text style={[text.fs_xs, text.color_zinc_500]}>
-                            {item.percentageRelativeToTotalSupply.toFixed(2)}%
+    const isCopied = copiedAddresses.has(item.ownerAddress);
+
+    return (
+        <View style={[p.p_3, bdr.color_zinc_500, bdr.b_w_(0.5)]}>
+            <View style={[flex.row, justify.between, align.items_center]}>
+                <View style={[flex.f_1]}>
+                    <View style={[flex.row, align.items_center, flex.gap_2]}>
+                        <Text style={[text.fs_sm, text.color_zinc_300]} weight="medium">
+                            {formatAddress(item.ownerAddress)}
                         </Text>
+                        <Pressable
+                            onPress={handleCopy}
+                            style={[p.p_1, bdr.rounded_sm]}
+                        >
+                            {isCopied ? (
+                                <Animated.View style={[flex.row, align.items_center, { opacity: fadeAnim }]}>
+                                    <Check size={12} color="#9CA3AF" />
+                                </Animated.View>
+                            ) : (
+                                <Copy size={12} color="#71717a" />
+                            )}
+                        </Pressable>
                     </View>
-                    <View style={[align.items_center, justify.center, flex.gap_2, flex.row]}>
+                    <Text style={[text.fs_xs, text.color_zinc_500]}>
+                        {item.percentageRelativeToTotalSupply.toFixed(2)}%
+                    </Text>
+                </View>
+                <View style={[align.items_center, justify.center, flex.gap_2, flex.row]}>
+                    <View style={[align.items_end, flex.gap_1]}>
                         <Text style={[text.fs_sm, text.color_zinc_300]} weight="medium">
                             {formatCryptoNumber(Number(item.balanceFormatted))}
                         </Text>
@@ -198,10 +202,26 @@ export const TokenHolderList = ({ token }: TokenMetadataProps) => {
                             <View style={[fx.bg_color_zinc_600, w.w_(`${((Number(item.balanceFormatted) / totalSupply) * 600)}`), h.h_2, bdr.rounded_full]}></View>
                         </View>
                     </View>
+                    <Pressable
+                        onPress={handleViewPortfolio}
+                        style={[
+                            p.px_3,
+                            p.py_2,
+                            bdr.rounded_md,
+                            { backgroundColor: '#1e293b' },
+                            bdr.w_1,
+                            { borderColor: '#3b82f6' }
+                        ]}
+                    >
+                        <Text style={[text.fs_xs, { color: '#3b82f6' }]} weight="medium">
+                            Portfolio
+                        </Text>
+                    </Pressable>
                 </View>
             </View>
-        );
-    };
+        </View>
+    );
+};
 
     const renderHeader = () => (
         <View style={[p.px_3, p.pb_4]}>

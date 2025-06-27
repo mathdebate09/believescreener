@@ -12,10 +12,8 @@ export function formatCryptoNumber(num: number): string {
     value = num / 1000;
     suffix = "K";
   } else {
-    return num.toString();
+    return num.toFixed(2);
   }
 
-  const fixed = value.toFixed(2);
-  const trimmed = fixed.endsWith(".00") ? parseInt(fixed).toString() : fixed;
-  return trimmed + suffix;
+  return value.toFixed(2) + suffix;
 }

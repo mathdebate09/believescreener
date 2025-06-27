@@ -89,6 +89,16 @@ function Layout() {
             },
           }}
         />
+        <Stack.Screen
+          name="portfolio/[walletAddress]"
+          options={{
+            headerShown: false,
+            animation: 'none',
+            contentStyle: {
+              backgroundColor: Colors.black,
+            },
+          }}
+        />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="light" backgroundColor={Colors.black} />
