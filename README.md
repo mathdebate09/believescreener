@@ -13,20 +13,55 @@ A React Native app for Android and iOS, built for [believescreener.com](https://
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/25761b03-6393-41a5-b24b-00d1b931c7fd" width="250"/></td>
-    <td><img src="https://github.com/user-attachments/assets/b8c06254-e24d-472e-acd8-72b666f7cf57" width="250"/></td>
-    <td><img src="https://github.com/user-attachments/assets/6a44c957-52d5-4ae5-9175-16b96f26bb4a" width="250"/></td>
-    <td><img src="https://github.com/user-attachments/assets/f596d71d-754e-4e7e-8172-891a99aa12f7" width="250"/></td>
-    <td><img src="https://github.com/user-attachments/assets/9a3d77b2-9180-48cb-9f23-d8634de37eb8" width="250"/></td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/25761b03-6393-41a5-b24b-00d1b931c7fd" width="250"/><br/>
+      <p>Home Page</p>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/b8c06254-e24d-472e-acd8-72b666f7cf57" width="250"/><br/>
+      <p>Token - Info</p>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/6a44c957-52d5-4ae5-9175-16b96f26bb4a" width="250"/><br/>
+      <p>Token - Chart</p>
+    </td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/1a1d0c81-3eeb-4412-828c-9b1ac60669b8" width="250"/></td>
-    <td><img src="https://github.com/user-attachments/assets/2d5aab5c-4c47-46fe-917a-efe3a5ffbc84" width="250"/></td>
-    <td><img src="https://github.com/user-attachments/assets/2e04c8a0-ef02-43e5-947d-afe332aa5c5d" width="250"/></td>
-    <td><img src="https://github.com/user-attachments/assets/22f56bd3-e11a-41b3-8f8d-f39b261df7b6" width="250"/></td>
-    <td><img src="https://github.com/user-attachments/assets/575dcfef-b118-47ba-a19a-f30ef612247b" width="250"/></td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/f596d71d-754e-4e7e-8172-891a99aa12f7" width="250"/><br/>
+      <p>Token - Holders (loading)</p>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/9a3d77b2-9180-48cb-9f23-d8634de37eb8" width="250"/><br/>
+      <p>Token - Holders</p>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/1a1d0c81-3eeb-4412-828c-9b1ac60669b8" width="250"/><br/>
+      <p>Search - Portfolio</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/2d5aab5c-4c47-46fe-917a-efe3a5ffbc84" width="250"/><br/>
+      <p>Portfolio</p>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/2e04c8a0-ef02-43e5-947d-afe332aa5c5d" width="250"/><br/>
+      <p>Search - Token</p>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/22f56bd3-e11a-41b3-8f8d-f39b261df7b6" width="250"/><br/>
+      <p>Favourites (empty)</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/575dcfef-b118-47ba-a19a-f30ef612247b" width="250"/><br/>
+      <p>Favourites</p>
+    </td>
   </tr>
 </table>
+
 
 ## Tech Stack
 
@@ -58,6 +93,13 @@ I've mocked the list of tokens at [believe-dummy-app](https://github.com/mathdeb
    git clone git@github.com:mathdebate09/believescreener.git
    cd believescreener
    ```
+
+1. Set up `.env`
+    - COPY `.env.template` to `.env`
+    - Moralis API key from [moralis/register](https://admin.moralis.com/register)
+    - Helius API key from [helius/signup](https://dashboard.helius.dev/signup) -> [helius/endpoints](https://dashboard.helius.dev/endpoints)
+        - *Only paste the alphanumeric string after `https://mainnet.helius-rpc.com/?api-key=` in the `.env` as Helius API key
+  
 1. Install dependencies
 
    ```bash
@@ -72,7 +114,11 @@ I've mocked the list of tokens at [believe-dummy-app](https://github.com/mathdeb
 
 In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Expo Go](https://expo.dev/go) is the fastest way, but requires an Android/iOS device for their OS specific preview
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+
+## Contact
+
+For any issue related to setup, don't hesitate to ask me!
+[Telegram](https://t.me/jayowiee) || [X.COM](https://x.com/jaywoiee)
