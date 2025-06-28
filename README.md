@@ -70,6 +70,21 @@ A React Native app for Android and iOS, built for [believescreener.com](https://
 [![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/docs/)
 [![Nativeflow](https://img.shields.io/badge/Nativeflow-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://nativeflow.js.org/docs/intro)
 
+## Architecture
+
+```mermaid
+flowchart TD
+    Start["Fetch Believe tokens & values from DEX"] --> App["Believe Screener App"]
+    App --> Home["Home"] & Search["Search"] & Favourite["Favourite"]
+    Search --> Wallet["Wallet (CA)"] & TokenKW["Token (keyword)"]
+    Home --> TokenPg["token/{mintAddress}"]
+    Favourite --> TokenPg
+    TokenPg --> Info["Info (favourite, trade, CA copy)"] & Charts["Charts"] & Holdings["Holdings (holder list)"]
+    Holdings --> Portfolio["portfolio/{walletAddress}"]
+    TokenKW --> TokenPg
+    Wallet --> Portfolio
+```
+
 ## Approach
 
 ### How did I fetch the list of Believe Tokens?
